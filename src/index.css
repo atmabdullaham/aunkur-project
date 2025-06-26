@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Tiro+Bangla:ital@0;1&display=swap');
+@theme {
+    --font-tirobangla: "Tiro Bangla","serif"; 
+    --font-anekbangla: "Anek Bangla","sans-serif"; 
+ }
