@@ -33,7 +33,7 @@ const EnrollmentTimer = () => {
   }, [targetDate]);
   const counter = "Countdown timer";
   return (
-    <div className="grid grid-cols-6">
+    <div className="grid grid-cols-6 w-10/12 mx-auto bg-gradient-to-br from-[#b3e5fc] via-[#4dd0e1] to-[#26a69a] rounded-lg shadow-lg p-10 my-10 gap-5 items-center">
       <div className="col-span-2">
         <img src={aunkurGif} alt="" className="" />
       </div>
@@ -82,7 +82,7 @@ const EnrollmentTimer = () => {
               sec
             </div>
           </div>
-          <h2 className="text-3xl font-bold text-center">
+          <h2 className="text-3xl font-bold text-center font-tirobangla">
             অংকুর বৃত্তি পরীক্ষায় অংশ নিয়ে অংকুর স্টুডেন্ট অফ দ্যা ইয়ার 2025
             হওয়ার চ্যালেঞ্জ নিতে চাইলে আজই এনরোল করে ফেলো
           </h2>
