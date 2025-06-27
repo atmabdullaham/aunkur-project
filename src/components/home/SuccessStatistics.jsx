@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const SuccessStatistics = () => {
   const statisticsData = [
     {
       id: 1,
-      number: "50k+",
+      targetNumber: 50000,
+      suffix: "+",
       label: "Student Applied",
       icon: (
         <svg
@@ -18,7 +19,8 @@ const SuccessStatistics = () => {
     },
     {
       id: 2,
-      number: "4k+",
+      targetNumber: 4000,
+      suffix: "+",
       label: "Scholarship Holder",
       icon: (
         <svg
@@ -32,7 +34,8 @@ const SuccessStatistics = () => {
     },
     {
       id: 3,
-      number: "70+",
+      targetNumber: 70,
+      suffix: "+",
       label: "Associated School",
       icon: (
         <svg
@@ -46,7 +49,8 @@ const SuccessStatistics = () => {
     },
     {
       id: 4,
-      number: "15+",
+      targetNumber: 15,
+      suffix: "+",
       label: "Years Of Org",
       icon: (
         <svg
@@ -59,6 +63,24 @@ const SuccessStatistics = () => {
       ),
     },
   ];
+
+  // Function to convert English numbers to Bengali
+  const convertToBengali = (number) => {
+    const bengaliNumbers = {
+      0: "০",
+      1: "১",
+      2: "২",
+      3: "৩",
+      4: "৪",
+      5: "৫",
+      6: "৬",
+      7: "৭",
+      8: "৮",
+      9: "৯",
+    };
+
+    return number.toString().replace(/\d/g, (digit) => bengaliNumbers[digit]);
+  };
 
   return (
     <section className="bg-white py-16 px-4">
@@ -79,9 +101,11 @@ const SuccessStatistics = () => {
           {statisticsData.map((stat) => (
             <StatisticCard
               key={stat.id}
-              number={stat.number}
+              targetNumber={stat.targetNumber}
+              suffix={stat.suffix}
               label={stat.label}
               icon={stat.icon}
+              convertToBengali={convertToBengali}
             />
           ))}
         </div>
@@ -90,12 +114,83 @@ const SuccessStatistics = () => {
   );
 };
 
-const StatisticCard = ({ number, label, icon }) => {
+const StatisticCard = ({
+  targetNumber,
+  suffix,
+  label,
+  icon,
+  convertToBengali,
+}) => {
+  const [currentNumber, setCurrentNumber] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
+
+  // Intersection Observer to trigger animation when card comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
+  // Animate the number counting
+  useEffect(() => {
+    if (isVisible) {
+      const duration = 2000; // 2 seconds
+      const startTime = Date.now();
+
+      const animate = () => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(targetNumber * easeOutQuart);
+
+        setCurrentNumber(current);
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+
+      animate();
+    }
+  }, [isVisible, targetNumber]);
+
+  // Format the number for display
+  const formatNumber = (num) => {
+    return num; // Return the number as is, no k formatting
+  };
+
+  const displayNumber = convertToBengali(formatNumber(currentNumber));
+  const displaySuffix = "+";
+
   return (
-    <div className="bg-white border-2 border-green-200 rounded-xl p-8 text-center hover:border-green-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+    <div
+      ref={cardRef}
+      className="bg-white border-2 border-green-200 rounded-xl p-8 text-center hover:border-green-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+    >
       <div className="flex justify-center mb-6">{icon}</div>
       <div className="mb-4">
-        <h3 className="text-4xl font-bold text-green-500 mb-2">{number}</h3>
+        <h3 className="text-4xl font-bold text-green-500 mb-2">
+          {displayNumber}
+          {displaySuffix}
+        </h3>
         <p className="text-gray-700 text-lg font-medium">{label}</p>
       </div>
     </div>
