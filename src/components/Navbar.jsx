@@ -87,6 +87,9 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
+          <NavLink className="btn" to="/registration">
+            Registration
+          </NavLink>
           {!user && (
             <ul>
               {" "}
