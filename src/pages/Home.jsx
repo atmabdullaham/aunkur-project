@@ -1,5 +1,7 @@
 import Banner from "../components/Banner";
 import EnrollmentTimer from "../components/EnrollmentTimer";
+import ChairmanMessage from "../components/home/CharimanMessage";
+import OurActivities from "../components/home/OurActivities";
 import SuccessStatistics from "../components/home/SuccessStatistics";
 import WhyScholarshipProject from "../components/home/WhyScholarshipProject";
 
@@ -13,6 +15,10 @@ const Home = () => {
       <WhyScholarshipProject></WhyScholarshipProject>
       {/* Successs Statistics */}
       <SuccessStatistics></SuccessStatistics>
+      {/* Our activities */}
+      <OurActivities></OurActivities>
+      {/* Chairman message */}
+      <ChairmanMessage></ChairmanMessage>
     </div>
   );
 };
