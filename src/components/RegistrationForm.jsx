@@ -1,9 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
 
-const RegistrationForm = () => {
-  const [isFillup, setisFillup] = useState(false);
+const RegistrationForm = ({ isFillup, setisFillup }) => {
   const {
     register,
     handleSubmit,

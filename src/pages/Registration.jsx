@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Registration = () => {
   const [isFillup, setisFillup] = useState(false);
+  const [isPayment, setisPayment] = useState(false);
   return (
     <div>
       <p className="text-center bg-[#E5FFF5]  rounded-[6px] max-w-4xl p-1 mb-3 mt-3 mx-auto">
@@ -13,7 +14,7 @@ const Registration = () => {
       <div className="flex flex-col items-center justify-center">
         {/* Registration form component can be added here */}
         <RegistrationForm setisFillup={setisFillup} isFillup={isFillup} />
-        <Payment></Payment>
+        <Payment isFillup={isFillup}></Payment>
       </div>
     </div>
   );
