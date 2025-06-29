@@ -239,9 +239,11 @@ const RegistrationForm = () => {
         </div>
       </div>
       <div className="text-center mt-8">
-        <button type="submit" className="btn btn-success px-10">
-          সাবমিট করুন
-        </button>
+        <input
+          className="btn btn-primary btn-lg px-8 py-3 text-white bg-gradient-to-r from-green-500 to-blue-500 border-none hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+          type="submit"
+          value="সাবমিট করুন"
+        />
       </div>
     </form>
   );

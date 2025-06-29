@@ -1,5 +1,6 @@
 import React from "react";
 import RegistrationForm from "../components/RegistrationForm";
+import Payment from "../components/Payment";
 
 const Registration = () => {
   return (
@@ -10,6 +11,7 @@ const Registration = () => {
       <div className="flex items-center justify-center">
         {/* Registration form component can be added here */}
         <RegistrationForm />
+        <Payment></Payment>
       </div>
     </div>
   );
