@@ -65,32 +65,7 @@ const Payment = () => {
 
         {/* bKash Payment Form */}
         {selectedMethod === "bkash" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                bKash Number
-              </label>
-              <input
-                type="text"
-                value={bkashNumber}
-                onChange={(e) => setBkashNumber(e.target.value)}
-                placeholder="01XXXXXXXXX"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-colors"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                bKash Transaction ID
-              </label>
-              <input
-                type="text"
-                value={transactionId}
-                onChange={(e) => setTransactionId(e.target.value)}
-                placeholder="sendnahjnuja823"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition-colors"
-              />
-            </div>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"></div>
         )}
 
         {/* SSLCommerz Payment Info */}
