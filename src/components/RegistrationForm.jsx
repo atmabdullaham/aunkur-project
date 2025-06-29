@@ -1,7 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 const RegistrationForm = () => {
+  const [isFillup, setisFillup] = useState(false);
   const {
     register,
     handleSubmit,
@@ -10,12 +12,17 @@ const RegistrationForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    if (data) {
+      setisFillup(true);
+    }
   };
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="border border-green-500 rounded-lg p-8 max-w-4xl mx-auto bg-base-100"
+      className={`${
+        isFillup ? "hidden" : "block"
+      } border border-green-500 rounded-lg p-8 max-w-4xl mx-auto bg-base-100`}
     >
       <h2 className="font-bold mb-6 text-xl">রেজিস্ট্রেশন ফরম</h2>
       <div className="flex flex-wrap gap-6">
