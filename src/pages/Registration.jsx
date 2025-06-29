@@ -1,5 +1,6 @@
 import React from "react";
 import RegistrationForm from "../components/RegistrationForm";
+import RegistrationStepsTimeline from "../components/RegistrationStepsTimeline";
 import Payment from "../components/Payment";
 import { useState } from "react";
 
@@ -8,6 +9,7 @@ const Registration = () => {
   const [isPayment, setisPayment] = useState(false);
   return (
     <div>
+      <RegistrationStepsTimeline></RegistrationStepsTimeline>
       <p className="text-center bg-[#E5FFF5]  rounded-[6px] max-w-4xl p-1 mb-3 mt-3 mx-auto">
         ফরম পূরণ করে তোমার সিট বুকিং করে নাও।
       </p>
