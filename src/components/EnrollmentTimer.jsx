@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import aunkurVideo from "../assets/aunkur.mp4";
+// import aunkurVideo from "../assets/aunkur.mp4";
+import aunkurTimerCardGif from "../assets/aunkur-timer-card-animation.gif";
 
 const EnrollmentTimer = () => {
   const targetDate = new Date("2025-07-01T00:00:00");
@@ -36,14 +37,15 @@ const EnrollmentTimer = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-5xl mx-auto bg-gradient-to-br from-[#565dec] via-[#191b2f] to-[#565dec] rounded-2xl shadow-2xl p-6 md:p-10 my-10 gap-8 items-center border border-[#23243a]">
       {/* Video (unchanged) */}
       <div>
-        <video
+        {/* <video
           src={aunkurVideo}
           autoPlay
           loop
           muted
           playsInline
           className="w-full rounded-xl"
-        />
+        /> */}
+        <img src={aunkurTimerCardGif} alt="" />
       </div>
       {/* Countdown and Info */}
       <div className="flex flex-col items-center md:items-start gap-6">
