@@ -5,3 +5,24 @@
     --font-tirobangla: "Tiro Bangla","serif"; 
     --font-anekbangla: "Anek Bangla","sans-serif"; 
  }
+ /* Animated border CSS */
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes border-rotate {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.animate-border {
+  --border-angle: 0deg;
+  border: 1px solid transparent;
+  background:
+    conic-gradient(from var(--border-angle), #0000007a 80%, #6366f1 86%, #a5b4fc 90%, #6366f1 94%, #64748b7a) border-box;
+  animation: border-rotate 4s linear infinite;
+  border-radius: 1.5rem;
+}

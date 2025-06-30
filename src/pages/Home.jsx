@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import EnrollmentTimer from "../components/EnrollmentTimer";
+import AunkurSyllabus from "../components/home/AunkurSyllabus";
 import ChairmanMessage from "../components/home/CharimanMessage";
 import HowToApply from "../components/home/HowToApply";
 import OurActivities from "../components/home/OurActivities";
@@ -16,6 +17,8 @@ const Home = () => {
       <HowToApply></HowToApply>
       {/* Why Scholarship Project */}
       <WhyScholarshipProject></WhyScholarshipProject>
+      {/* Aunkur Syllabus */}
+      <AunkurSyllabus></AunkurSyllabus>
       {/* Successs Statistics */}
       <SuccessStatistics></SuccessStatistics>
       {/* Our activities */}
