@@ -2,11 +2,22 @@ import React, { useState } from "react";
 
 import { Check, CreditCard } from "lucide-react";
 
-const Payment = ({ isFillup }) => {
+const Payment = ({ onSuccess }) => {
   const [selectedMethod, setSelectedMethod] = useState("bkash");
   const [bkashNumber, setBkashNumber] = useState("");
   const [transactionId, setTransactionId] = useState("");
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+  const handlePayment = () => {
+    // Simulate success (replace with actual payment logic)
+    const paymentInfo = {
+      transactionId: "TXN123456",
+      paymentMethod: "bKash",
+      amount: 200,
+    };
+
+    onSuccess(paymentInfo); // Send payment data to parent
+  };
 
   const paymentMethods = [
     {
@@ -28,7 +39,6 @@ const Payment = ({ isFillup }) => {
       color: "bg-orange-50 border-orange-200 text-orange-700",
     },
   ];
-  if (!isFillup) return null;
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white">
@@ -137,6 +147,7 @@ const Payment = ({ isFillup }) => {
 
         {/* Submit Button */}
         <button
+          onClick={handlePayment}
           disabled={!agreedToTerms}
           className={`
             w-full py-4 rounded-lg font-semibold text-white transition-all duration-200

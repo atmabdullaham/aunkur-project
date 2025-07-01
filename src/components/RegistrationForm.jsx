@@ -1,27 +1,22 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const RegistrationForm = ({ isFillup, setisFillup }) => {
+const RegistrationForm = ({ onSubmit }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const submitForm = (data) => {
     console.log(data);
-    console.table(data);
-    if (data) {
-      setisFillup(true);
-    }
+    onSubmit(data);
   };
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
-      className={`${
-        isFillup ? "hidden" : "block"
-      } border border-green-500 rounded-lg p-8 max-w-4xl mx-auto bg-base-100`}
+      onSubmit={handleSubmit(submitForm)}
+      className={`border border-green-500 rounded-lg p-8 max-w-4xl mx-auto bg-base-100`}
     >
       <div className="text-center mb-8 ">
         <h1 className="text-4xl font-bold text-gray-800 mb-2 font-tirobangla">
@@ -280,7 +275,7 @@ const RegistrationForm = ({ isFillup, setisFillup }) => {
         <input
           className="btn btn-primary btn-lg px-8 py-3 text-white bg-gradient-to-r from-green-500 to-blue-500 border-none hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
           type="submit"
-          value="সাবমিট করুন"
+          value="সাবমিট"
         />
       </div>
     </form>
