@@ -6,6 +6,7 @@ import ApplicationSteps from "../components/aunkurScholarship/ApplicationSteps";
 import Eligibility from "../components/aunkurScholarship/Eligibility";
 import ApplicationCalendar from "../components/aunkurScholarship/ApplicationCalendar";
 import EvaluationAndSelection from "../components/aunkurScholarship/EvaluationAndSelection";
+import FAQ from "../components/aunkurScholarship/FAQ";
 
 const AunkurScholarship = () => {
   return (
@@ -17,6 +18,7 @@ const AunkurScholarship = () => {
       <Eligibility />
       <ApplicationCalendar />
       <EvaluationAndSelection />
+      <FAQ />
     </div>
   );
 };
