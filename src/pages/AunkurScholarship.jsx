@@ -3,6 +3,7 @@ import Header from "../components/aunkurScholarship/Header";
 import EnrollmentTimer from "../components/EnrollmentTimer";
 import AunkurSyllabus from "../components/home/AunkurSyllabus";
 import ApplicationSteps from "../components/aunkurScholarship/ApplicationSteps";
+import Eligibility from "../components/aunkurScholarship/Eligibility";
 
 const AunkurScholarship = () => {
   return (
@@ -11,6 +12,7 @@ const AunkurScholarship = () => {
       <EnrollmentTimer />
       <AunkurSyllabus />
       <ApplicationSteps />
+      <Eligibility />
     </div>
   );
 };
