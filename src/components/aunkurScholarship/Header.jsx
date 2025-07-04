@@ -24,7 +24,7 @@ const Header = () => {
           {/* Left */}
           <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-8">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
-              <span className="text-gray-900">অঙ্কুর</span>{" "}
+              <span className="text-gray-900 font-bangla">অঙ্কুর</span>{" "}
               <span className="text-emerald-500">বৃত্তি প্রকল্প - ২০২৪</span>
             </h1>
             <p className="text-gray-700 text-base sm:text-lg mb-8 max-w-xl">
