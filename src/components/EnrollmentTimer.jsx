@@ -44,7 +44,7 @@ const EnrollmentTimer = () => {
         {/* Countdown */}
         <div className="flex gap-4 mb-2">
           <div className="flex flex-col items-center">
-            <span className="bg-[#23243a] text-white font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
+            <span className="bg-green-100 bg-opacity-30 backdrop-blur-xl text-black font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
               {String(timeLeft.days).padStart(2, "0")}
             </span>
             <span className="text-xs text-gray-400 mt-1">Days</span>
@@ -53,7 +53,7 @@ const EnrollmentTimer = () => {
             :
           </span>
           <div className="flex flex-col items-center">
-            <span className="bg-[#23243a] text-white font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
+            <span className="bg-green-100 bg-opacity-30 backdrop-blur-md text-black font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
               {String(timeLeft.hours).padStart(2, "0")}
             </span>
             <span className="text-xs text-gray-400 mt-1">Hours</span>
@@ -62,7 +62,7 @@ const EnrollmentTimer = () => {
             :
           </span>
           <div className="flex flex-col items-center">
-            <span className="bg-[#23243a] text-white font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
+            <span className="bg-green-100 bg-opacity-30 backdrop-blur-md text-black  font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
               {String(timeLeft.minutes).padStart(2, "0")}
             </span>
             <span className="text-xs text-gray-400 mt-1">Minutes</span>
@@ -71,7 +71,7 @@ const EnrollmentTimer = () => {
             :
           </span>
           <div className="flex flex-col items-center">
-            <span className="bg-[#7c3aed] border border-amber-300 text-white font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
+            <span className="bg-green-100 bg-opacity-30 backdrop-blur-md text-blue-500 border border-amber-300 font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
               {String(timeLeft.seconds).padStart(2, "0")}
             </span>
             <span className="text-xs text-gray-400 mt-1">Seconds</span>
