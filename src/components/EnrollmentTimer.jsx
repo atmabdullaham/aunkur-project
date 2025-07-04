@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 // import aunkurVideo from "../assets/aunkur.mp4";
 import aunkurTimerCardGif from "../assets/aunkur-timer-card-animation.gif";
+import { FaRegCalendarAlt } from "react-icons/fa";
 
 const EnrollmentTimer = () => {
   const [enrollmentEnd] = useState(new Date("2025-09-30T23:59:00"));
@@ -79,26 +80,28 @@ const EnrollmentTimer = () => {
         {/* Main Heading */}
         <div className="text-right md:text-left">
           <h2 className="text-xl md:text-2xl font-bold text-black leading-snug mb-2">
-            অংকুর বৃত্তি পরীক্ষায় অংশ নিয়ে অংকুর স্টুডেন্ট অফ দ্যা ইয়ার{" "}
-            <span className="text-[#ff4d4f]">
-              ২০২৫ হওয়ার চ্যালেঞ্জ নিতে চাইলে
-            </span>{" "}
-            আজই এনরোল করে ফেলো
+            অঙ্কুর স্টুডেন্ট অফ দ্য{" "}
+            <span className="text-blue-500">ইয়ার ২০২৫ হতে চাও?</span> বৃত্তি
+            পরীক্ষায় অংশ নিতে এখনই এনরোল করো!{" "}
           </h2>
         </div>
         {/* Dates */}
         <div className="text-gray-400 text-sm md:text-base font-medium space-y-1">
-          <div>
+          <div className="flex items-center">
+            <FaRegCalendarAlt className="text-xl text-gray-600 mr-2" />
             এনরোলমেন্ট শুরু: <span className="text-black">১ জুন, ২০২৫</span>
           </div>
-          <div>
+          <div className="flex items-center">
+            <FaRegCalendarAlt className="text-xl text-gray-600 mr-2" />
             এনরোলমেন্ট শেষ: <span className="text-black">২৪ জুন, ২০২৫</span>
           </div>
         </div>
         {/* Button */}
-        <button className="mt-2 btn btn-primary btn-lg px-8 py-3 text-white bg-gradient-to-r from-green-500 to-blue-500 border-none hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-          Enroll Now
-        </button>
+        <a href="/registration" className="block">
+          <button className="bg-gradient-to-r from-green-400 to-blue-500 hover:scale-105 transition text-white px-6 py-3 rounded-xl font-semibold shadow-lg">
+            Enroll Now
+          </button>
+        </a>
       </div>
     </div>
   );
