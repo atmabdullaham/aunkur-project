@@ -7,6 +7,12 @@ import Registration from "../pages/Registration";
 import AunkurScholarship from "../pages/AunkurScholarship";
 import Error from "../components/Error";
 import Success from "../components/Success";
+import Activities from "../pages/Activities";
+import NewsAndBlog from "../pages/NewsAndBlog";
+import Calender from "../pages/Calender";
+import Library from "../pages/Library";
+import Quiz from "../pages/Quiz";
+import Result from "../pages/Result";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +45,30 @@ export const router = createBrowserRouter([
       {
         path: "/success",
         element: <Success></Success>,
+      },
+      {
+        path: "/activities",
+        element: <Activities></Activities>,
+      },
+      {
+        path: "/news-blogs",
+        element: <NewsAndBlog></NewsAndBlog>,
+      },
+      {
+        path: "/calender",
+        element: <Calender></Calender>,
+      },
+      {
+        path: "/library",
+        element: <Library></Library>,
+      },
+      {
+        path: "/quiz",
+        element: <Quiz></Quiz>,
+      },
+      {
+        path: "/result",
+        element: <Result></Result>,
       },
     ],
   },

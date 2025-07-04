@@ -28,25 +28,74 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <Link to="/activities">কার্যক্রম</Link>
+        <NavLink
+          to="/activities"
+          className={({ isActive }) =>
+            isActive ? "text-black font-bold underline" : "text-gray-600"
+          }
+        >
+          কার্যক্রম
+        </NavLink>
       </li>
       <li>
-        <Link to="/aunkur-scholarship">অংকুর বৃত্তি</Link>
+        <NavLink
+          to="/aunkur-scholarship"
+          className={({ isActive }) =>
+            isActive ? "text-black font-bold underline" : "text-gray-600"
+          }
+        >
+          অংকুর বৃত্তি
+        </NavLink>
       </li>
       <li>
-        <Link to="/news-blogs">নিউজ ও ব্লগ</Link>
+        <NavLink
+          to="/news-blogs"
+          className={({ isActive }) =>
+            isActive ? "text-black font-bold underline" : "text-gray-600"
+          }
+        >
+          নিউজ ও ব্লগ
+        </NavLink>
       </li>
       <li>
-        <Link to="/calender">ক্যালেন্ডার</Link>
+        <NavLink
+          to="/calender"
+          className={({ isActive }) =>
+            isActive ? "text-black font-bold underline" : "text-gray-600"
+          }
+        >
+          ক্যালেন্ডার
+        </NavLink>
       </li>
       <li>
-        <Link to="/library">লাইব্রেরি</Link>
+        <NavLink
+          to="/library"
+          className={({ isActive }) =>
+            isActive ? "text-black font-bold underline" : "text-gray-600"
+          }
+        >
+          লাইব্রেরি
+        </NavLink>
       </li>
       <li>
-        <Link to="/quiz">কুইজ</Link>
+        <NavLink
+          to="/quiz"
+          className={({ isActive }) =>
+            isActive ? "text-black font-bold underline" : "text-gray-600"
+          }
+        >
+          কুইজ
+        </NavLink>
       </li>
       <li>
-        <Link to="/result">ফলাফল</Link>
+        <NavLink
+          to="/result"
+          className={({ isActive }) =>
+            isActive ? "text-black font-bold underline" : "text-gray-600"
+          }
+        >
+          ফলাফল
+        </NavLink>
       </li>
     </>
   );
