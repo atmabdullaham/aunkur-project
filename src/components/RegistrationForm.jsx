@@ -19,7 +19,7 @@ const RegistrationForm = ({ onSubmit }) => {
       className={`border border-green-500 rounded-lg p-8 max-w-4xl mx-auto bg-base-100`}
     >
       <div className="text-center mb-8 ">
-        <h1 className="text-4xl font-bold text-gray-800 mb-2 font-tirobangla">
+        <h1 className="text-3xl font-bold text-gray-800 mb-2 font-tirobangla">
           রেজিস্ট্রেশন ফরম
         </h1>
         <p className="text-gray-600">
@@ -46,9 +46,9 @@ const RegistrationForm = ({ onSubmit }) => {
           <label className="label">Name (Bangla) *</label>
           <input
             {...register("name_bn", {
-              required: "Name in Bangla is required",
+              required: " Name in Bangla is required",
             })}
-            placeholder="Name in Bangla"
+            placeholder="Write Your Name in Bangla"
             className="input input-bordered w-full"
           />
           {errors.name_bn && (
@@ -57,7 +57,7 @@ const RegistrationForm = ({ onSubmit }) => {
         </div>
         {/* Gender */}
         <div>
-          <label className="label">Gender</label>
+          <label className="label">Gender *</label>
           <select
             {...register("gender", { required: "Gender is required" })}
             className="select select-bordered w-full"
@@ -72,7 +72,7 @@ const RegistrationForm = ({ onSubmit }) => {
         </div>
         {/* Date of Birth */}
         <div>
-          <label className="label">Date of Birth</label>
+          <label className="label">Date of Birth *</label>
           <input
             type="date"
             {...register("dob")}
@@ -85,12 +85,12 @@ const RegistrationForm = ({ onSubmit }) => {
       <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Father's Name */}
         <div>
-          <label className="label">Fathers Name *</label>
+          <label className="label">Father's Name *</label>
           <input
             {...register("father_name", {
               required: "Father's name is required",
             })}
-            placeholder="Fathers Name"
+            placeholder="Father's Name"
             className="input input-bordered w-full"
           />
           {errors.father_name && (
@@ -99,21 +99,23 @@ const RegistrationForm = ({ onSubmit }) => {
         </div>
         {/* Occupation Father*/}
         <div>
-          <label className="label">Occupation (optional)</label>
+          <label className="label">Father's Occupation *</label>
           <input
-            {...register("occupation1")}
-            placeholder="Occupation"
+            {...register("father_occupation", {
+              required: "Mother's name is required",
+            })}
+            placeholder="Enter father's occupation"
             className="input input-bordered w-full"
           />
         </div>
         {/* Mother's Name */}
         <div>
-          <label className="label">Mothers Name *</label>
+          <label className="label">Mother's Name *</label>
           <input
             {...register("mother_name", {
               required: "Mother's name is required",
             })}
-            placeholder="Mothers Name"
+            placeholder="Enter Mother's Name"
             className="input input-bordered w-full"
           />
           {errors.mother_name && (
@@ -122,12 +124,17 @@ const RegistrationForm = ({ onSubmit }) => {
         </div>
         {/* Occupation Mother*/}
         <div>
-          <label className="label">Occupation (optional)</label>
+          <label className="label">Mother's Occupation</label>
           <input
-            {...register("occupation2")}
-            placeholder="Occupation"
+            {...register("mother_occupation", {
+              required: "Mother's occupation is required",
+            })}
+            placeholder="Enter mother's occupation"
             className="input input-bordered w-full"
           />
+          {errors.mother_name && (
+            <p className="text-error">{errors.mother_occupation.message}</p>
+          )}
         </div>
       </div>
       {/* --------------------------------- */}
@@ -151,13 +158,16 @@ const RegistrationForm = ({ onSubmit }) => {
         <div>
           <label className="label">Class *</label>
           <input
-            {...register("class", { required: "Class is required" })}
+            {...register("student_class", { required: "Class is required" })}
             placeholder="Class"
             className="input input-bordered w-full"
           />
-          {errors.class && <p className="text-error">{errors.class.message}</p>}
+          {errors.class && (
+            <p className="text-error">{errors.student_class.message}</p>
+          )}
         </div>
         {/* Roll */}
+
         <div>
           <label className="label">Roll*</label>
           <input

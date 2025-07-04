@@ -2,7 +2,6 @@ import { useState } from "react";
 import RegistrationForm from "../components/RegistrationForm";
 import RegistrationStepsTimeline from "../components/RegistrationStepsTimeline";
 import Payment from "../components/Payment";
-import axios from "axios";
 
 const Registration = () => {
   const [formData, setFormData] = useState(null); // Stores form submission data

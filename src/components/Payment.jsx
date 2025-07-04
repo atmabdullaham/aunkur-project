@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Check, CreditCard } from "lucide-react";
+import axios from "axios";
 
 const Payment = ({ onSuccess }) => {
   const [selectedMethod, setSelectedMethod] = useState("bkash");
@@ -39,6 +40,20 @@ const Payment = ({ onSuccess }) => {
       color: "bg-orange-50 border-orange-200 text-orange-700",
     },
   ];
+
+  const pay = async () => {
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/bkash/payment/create",
+        { amount: 10, orderId: 1 },
+        { withCredentials: true }
+      );
+      window.location.href = data.bkashURL;
+      console.log(data);
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  };
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white">
@@ -147,7 +162,7 @@ const Payment = ({ onSuccess }) => {
 
         {/* Submit Button */}
         <button
-          onClick={handlePayment}
+          onClick={pay}
           disabled={!agreedToTerms}
           className={`
             w-full py-4 rounded-lg font-semibold text-white transition-all duration-200
