@@ -28,7 +28,7 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* -------------------------------- */}
       {/* Personal Information div*/}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl rounded-tr-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Name english */}
         <div>
           <label className="label">Name (English) *</label>
@@ -82,7 +82,7 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* -------------------------------- */}
       {/* Father's and Mothers's div */}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Father's Name */}
         <div>
           <label className="label">Father's Name *</label>
@@ -139,7 +139,7 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* --------------------------------- */}
       {/* Educational Information */}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* School Name */}
         <div>
           <label className="label">Name of School *</label>
@@ -158,12 +158,37 @@ const RegistrationForm = ({ onSubmit }) => {
         <div>
           <label className="label">Class *</label>
           <input
-            {...register("student_class", { required: "Class is required" })}
+            {...register("student_class", {
+              required: "Class is required",
+            })}
             placeholder="Class"
             className="input input-bordered w-full"
           />
-          {errors.class && (
+          {errors.student_class && (
             <p className="text-error">{errors.student_class.message}</p>
+          )}
+        </div>
+        {/* Section */}
+        <div>
+          <label className="label">Section *</label>
+          <select
+            {...register("student_section", {
+              required: "Section is required",
+            })}
+            placeholder="Section"
+            className="select select-bordered w-full"
+          >
+            <option value="">Select</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="ka">ক</option>
+            <option value="kha">খ</option>
+            <option value="ga">গ</option>
+            <option value="not">নেই</option>
+          </select>
+          {errors.student_section && (
+            <p className="text-error">{errors.student_section.message}</p>
           )}
         </div>
         {/* Roll */}
@@ -171,35 +196,46 @@ const RegistrationForm = ({ onSubmit }) => {
         <div>
           <label className="label">Roll*</label>
           <input
-            {...register("roll", { required: "Roll is required" })}
-            placeholder="Roll"
+            {...register("student_roll", { required: "Roll is required" })}
+            placeholder="Your roll number"
             className="input input-bordered w-full"
           />
-          {errors.roll && <p className="text-error">{errors.roll.message}</p>}
+          {errors.student_roll && (
+            <p className="text-error">{errors.student_roll.message}</p>
+          )}
         </div>
       </div>
       {/* -------------------------- */}
       {/* Contact Information */}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Phone */}
         <div>
-          <label className="label">Phone *</label>
+          <label className="label">Phone Number *</label>
           <input
-            {...register("phone", { required: "Phone is required" })}
+            {...register("phone_number", {
+              required: "Phone number is required",
+            })}
             placeholder="Phone"
             className="input input-bordered w-full"
           />
-          {errors.phone && <p className="text-error">{errors.phone.message}</p>}
+          {errors.phone_number && (
+            <p className="text-error">{errors.phone_number.message}</p>
+          )}
         </div>
 
-        {/* Mobile */}
+        {/* whatsapp */}
         <div>
           <label className="label">Whatsapp Number *</label>
           <input
-            {...register("mobile")}
-            placeholder="Mobile address"
+            {...register("whatsapp_number", {
+              required: "Whatsapp number is required",
+            })}
+            placeholder="Whatsapp Number"
             className="input input-bordered w-full"
           />
+          {errors.whatsapp_number && (
+            <p className="text-error">{errors.whatsapp_number.message}</p>
+          )}
         </div>
         {/* Present Adress */}
         <div>
@@ -246,13 +282,10 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* ------------------------------------- */}
       {/* email and exam center choice */}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl rounded-br-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/*Exam Center */}
         <div>
-          <label className="label">
-            Exam Center Choice{" "}
-            <span className="text-xs">(পরীক্ষা কেন্দ্র পছন্দ) *</span>
-          </label>
+          <label className="label">Exam Center Choice *</label>
           <select
             {...register("exam_center", {
               required: "Exam center is required",
@@ -260,8 +293,13 @@ const RegistrationForm = ({ onSubmit }) => {
             className="select select-bordered w-full"
           >
             <option value="">Select</option>
-            <option value="center1">Center 1</option>
-            <option value="center2">Center 2</option>
+            <option value="chawkbazar">চকবাজার</option>
+            <option
+              value="Chandgaon
+"
+            >
+              চাঁদগাও
+            </option>
           </select>
           {errors.exam_center && (
             <p className="text-error">{errors.exam_center.message}</p>
@@ -269,7 +307,7 @@ const RegistrationForm = ({ onSubmit }) => {
         </div>
         {/* Email Adress */}
         <div>
-          <label className="label">Email Address (optional) *</label>
+          <label className="label">Email Address *</label>
           <input
             type="email"
             {...register("email", { required: "Email is required" })}

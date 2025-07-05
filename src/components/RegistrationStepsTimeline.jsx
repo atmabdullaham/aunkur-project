@@ -11,12 +11,12 @@ const RegistrationStepsTimeline = ({ isFormSubmitted, isPaymentDone }) => {
 
         {/* Timeline Steps */}
 
-        <div className="flex justify-center items-center w-full">
+        <div className="flex justify-center items-center w-10/12 md:w-full">
           <ul className="timeline ">
             <li>
               <div
-                className={`timeline-start timeline-box ${
-                  true ? "bg-green-100 border-green-500" : "bg-gray-100"
+                className={`timeline-start timeline-box 
+                   bg-green-100 border-green-500 
                 }`}
               >
                 ফর্ম ফিলাপ করুন
