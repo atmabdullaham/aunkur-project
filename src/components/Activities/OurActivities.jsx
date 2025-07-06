@@ -1,85 +1,56 @@
 import React from "react";
-import Image_1 from "../../assets/activities_1.png";
-import Image_2 from "../../assets/activities_2.png";
-import Image_3 from "../../assets/activities_3.png";
-import Image_4 from "../../assets/activities_4.png";
-import Image_5 from "../../assets/activities_5.png";
-import Image_6 from "../../assets/activities_6.png";
-
+import "./style.css";
 const OurActivities = () => {
+  const data = [
+    {
+      title: "অর্থকুমার বৃত্তি প্রকল্প",
+      description:
+        "১৯৫৮ সাল থেকে চট্টগ্রামের সাড়ে জাগানগা বৃত্তি প্রকল্প, ১৯৯৫ সাল থেকে চট্টগ্রামের সাড়ে জাগানগা বৃত্তি প্রকল্প",
+      bgColor: "bg-blue-100",
+      icon: "🎓",
+    },
+    {
+      title: "বৃক্ষরোপণ অভিযান",
+      description:
+        "স্কুল ক্যাম্পাসে বৃক্ষরোপণ অভিযান ও স্কুল ছাত্রদের মাঝে গাছের চারা বিতরণ",
+      bgColor: "bg-purple-100",
+      icon: "🌱",
+    },
+    {
+      title: "উন্নত মূল্যবোধ ও চরিত্রিক নির্মলতা সৃষ্টি",
+      description:
+        "স্কুল ছাত্রদের মাঝে উন্নত মূল্যবোধ ও চরিত্রিক নির্মলতা সৃষ্টির প্রয়াস",
+      bgColor: "bg-green-100",
+      icon: "⚙️",
+    },
+    {
+      title: "কাউন্সিলিং ব্যবস্থা",
+      description:
+        "মেধা ও মানসিক স্বাস্থ্য বিকাশে কাউন্সিলিং ও বাহিকাজ আঞ্জানের ব্যবস্থা",
+      bgColor: "bg-pink-100",
+      icon: "🧠",
+    },
+  ];
+
   return (
-    <div className="bg-[#fdf1e8] px-4 sm:px-6 lg:px-20 py-12">
-      <div className="mx-auto flex flex-col lg:flex-row justify-between items-center gap-12">
-        {/* Left Section */}
-        <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black leading-snug">
-            শুভ্রতার স্পর্শে লালিত স্বপ্ন বিকশিত হোক সত্যের ছোঁয়ায়।
-          </h1>
-          <p className="text-base sm:text-lg text-gray-800 leading-relaxed">
-            অংকুর শিশু-কিশোর সাহিত্য সাংস্কৃতিক সংসদ, চট্টগ্রাম মহানগর দক্ষিণ-এর
-            ওয়েবসাইটে আপনাকে স্বাগতম। আমাদের উদ্দেশ্য হলো শিশু-কিশোরদের সাহিত্য
-            ও সংস্কৃতির প্রতি আগ্রহ সৃষ্টি করা এবং তাদের সৃজনশীলতা বিকাশে
-            সহায়তা করা।
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-6 rounded-full shadow-md transition">
-              Enroll Now
-            </button>
-            <button className="border border-black text-sm font-semibold py-3 px-6 rounded-full">
-              Details
-            </button>
-          </div>
-        </div>
-        {/* Right Section */}
-        <div className="grid grid-cols-2 gap-4 max-w-md sm:max-w-lg w-full">
-          {/* Top Row */}
-          <div className="col-span-2 flex justify-center gap-4">
-            <img
-              src={Image_1}
-              alt="Team"
-              className="w-1/2 h-auto object-cover rounded-full border border-amber-400 shadow-2xl"
-            />
-            <img
-              src={Image_3}
-              alt="Person"
-              className="w-1/4 h-auto object-cover rounded-2xl border border-amber-400 shadow-2xl"
-            />
-          </div>
-
-          {/* Middle Row */}
-          <div className="col-span-2 flex justify-center gap-4">
-            <img
-              src={Image_4}
-              alt="Person"
-              className="w-1/4 h-auto object-cover rounded-full border border-amber-400 shadow-2xl"
-            />
-            <img
-              src={Image_2}
-              alt="Collab"
-              className="w-1/2 h-auto object-cover rounded-2xl border border-amber-400 shadow-2xl"
-            />
-          </div>
-
-          {/* Bottom Row */}
-          <div className="col-span-2 flex justify-center gap-4">
-            {/* <img
-              src={Image_5}
-              alt="Session"
-              className="w-1/4 h-auto object-cover rounded-full border border-white shadow"
-            /> */}
-            <img
-              src={Image_1}
-              alt="Team"
-              className="w-1/2 h-auto object-cover rounded-full border border-amber-400 shadow-2xl"
-            />
-            <img
-              src={Image_6}
-              alt="Person"
-              className="w-1/4 h-auto object-cover rounded-2xl border border-amber-400 shadow-2xl"
-            />
-          </div>
-        </div>
-      </div>
+    <div className="programs-container">
+      <h2 className="title">আমাদের কার্যক্রম</h2>
+      <p className="subtitle">
+        উল্লেখযোগ্য স্পর্শকাতর লাইনটি স্বপ্ন বিকশিত হোক সততা (ট্যাগলাইন).....
+      </p>
+      <ul className="cards">
+        {data.map((item, index) => (
+          <li key={index} className="card" style={{ "--index": index + 1 }}>
+            <div className="card__content">
+              <div className="icon">{item.icon}</div>
+              <div>
+                <h3 className="card-title">{item.title}</h3>
+                <p className="card-description">{item.description}</p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

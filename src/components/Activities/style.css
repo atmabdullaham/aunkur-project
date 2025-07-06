@@ -1,0 +1,97 @@
+:root {
+  --card-height: 40vw;
+  --card-margin: 4vw;
+  --card-top-offset: 1em;
+  --outline-width: 0px;
+  --numcards: 4;
+}
+
+body {
+  font-family: "Armata", sans-serif;
+}
+
+.programs-container {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 1rem;
+  color: #4caf50;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+  margin-bottom: var(--card-margin);
+}
+
+.card {
+  position: sticky;
+  top: 150px;
+  padding-top: calc(var(--index) * var(--card-top-offset));
+  margin-bottom: 2rem;
+  will-change: transform;
+  transform-origin: 50% 0%;
+}
+
+.card__content {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background:radial-gradient(circle, rgb(255, 255, 255), rgb(255, 255, 255));
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 6em;
+  margin-right: 1rem;
+
+}
+
+.card-title {
+  font-size: 2em;
+  margin-bottom: 0.5rem;
+
+}
+
+.card-description {
+  font-size: 1.2em;
+  color: #000000;
+}
+
+/* Scroll-Driven Animation Support */
+@supports (animation-timeline: view()) {
+  .card {
+    --index0: calc(var(--index) - 1);
+    --reverse-index: calc(var(--numcards) - var(--index0));
+    --reverse-index0: calc(var(--reverse-index) - 1);
+  }
+
+  @keyframes scale {
+    to {
+      transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+    }
+  }
+
+  .card__content {
+    --start-range: calc(var(--index0) / var(--numcards) * 100%);
+    --end-range: calc((var(--index)) / var(--numcards) * 100%);
+    animation: linear scale forwards;
+    animation-timeline: --cards-element-scrolls-in-body;
+    animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+  }
+}
