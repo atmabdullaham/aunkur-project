@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { div, section, ul } from "motion/react-client";
+import "./style.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -20,8 +21,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive ? "text-black font-bold underline" : "text-gray-600"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border"
+              : "hover:text-[#000000]"
           }
         >
           হোম
@@ -30,8 +35,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/activities"
-          className={({ isActive }) =>
-            isActive ? "text-black font-bold underline" : "text-gray-600"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border" /* Apply the animated-border class when active */
+              : "hover:text-[#000000]"
           }
         >
           কার্যক্রম
@@ -40,8 +49,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/aunkur-scholarship"
-          className={({ isActive }) =>
-            isActive ? "text-black font-bold underline" : "text-gray-600"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border" /* Apply the animated-border class when active */
+              : "hover:text-[#000000]"
           }
         >
           অংকুর বৃত্তি
@@ -50,8 +63,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/news-blogs"
-          className={({ isActive }) =>
-            isActive ? "text-black font-bold underline" : "text-gray-600"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border" /* Apply the animated-border class when active */
+              : "hover:text-[#000000]"
           }
         >
           নিউজ ও ব্লগ
@@ -60,8 +77,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/calender"
-          className={({ isActive }) =>
-            isActive ? "text-black font-bold underline" : "text-gray-600"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border" /* Apply the animated-border class when active */
+              : "hover:text-[#000000]"
           }
         >
           ক্যালেন্ডার
@@ -70,8 +91,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/library"
-          className={({ isActive }) =>
-            isActive ? "text-black font-bold underline" : "text-gray-600"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border" /* Apply the animated-border class when active */
+              : "hover:text-[#000000]"
           }
         >
           লাইব্রেরি
@@ -80,8 +105,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/quiz"
-          className={({ isActive }) =>
-            isActive ? "text-black font-bold underline" : "text-gray-600"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border" /* Apply the animated-border class when active */
+              : "hover:text-[#000000]"
           }
         >
           কুইজ
@@ -90,8 +119,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/result"
-          className={({ isActive }) =>
-            isActive ? "text-black font-bold underline" : "text-gray-600"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border" /* Apply the animated-border class when active */
+              : "hover:text-[#000000]"
           }
         >
           ফলাফল

@@ -1,0 +1,39 @@
+@keyframes borderGrow {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .animated-border {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;  /* Adjust this value to fit the positioning of the border */
+      left: 0;
+      width: 0;
+      height: 2px;   /* Adjust this value to fit the height of the border */
+      background-color: #ff1e1e; /* Color of the border when active */
+      animation: borderGrow 2s infinite; /* Adjust the duration of the animation as needed */
+    }
+  }
+  
+  @keyframes border-blink {
+    0% { border-color: transparent; }
+    50% { border-color: #d0ff00; }
+    100% { border-color: transparent; }
+  }
+  
+  /* .border-blink {
+    animation: border-blink 1s infinite;
+    box-shadow: 2px 2px 10px #0668a1;
+    transition: 0.3s ease;
+  } */
+  .border-blink:hover {
+    border-color: rgb(251, 255, 1);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #f5f900e2, 0 0 40px rgba(255, 2, 82, 0.763), 0 0 60px rgba(249, 0, 77, 0.3);
+  }
