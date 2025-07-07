@@ -1,5 +1,4 @@
 :root {
-  --card-height: 40vw;
   --card-margin: 4vw;
   --card-top-offset: 1em;
   --outline-width: 0px;
@@ -8,25 +7,27 @@
 
 body {
   font-family: "Armata", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .programs-container {
-  max-width: 60vw;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .title {
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #4caf50;
 }
 
 .subtitle {
   text-align: center;
-  font-size: 1.2em;
-  color: #888;
+  font-size: 1.1rem;
+  color: #666;
   margin-bottom: 2rem;
 }
 
@@ -43,43 +44,39 @@ body {
   top: 150px;
   padding-top: var(--card-top-offset);
   margin-bottom: 2rem;
-  will-change: transform;
-  transform-origin: 50% 0%;
-  transform: none; /* Remove any transformations */
 }
 
 .card__content {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  border-top: 3px solid rgba(20, 59, 255, 0.856);
   padding: 1rem;
   border-radius: 1rem;
-  background-color: #ffffff;
-  /* background-color: rgba(22, 163, 74, 0.3); 
-  backdrop-filter: blur(30px);*/
   box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.05), 0 0.5em 1em rgba(0, 0, 0, 0.05);
-  border-top: 3px solid rgba(20, 59, 255, 0.856);
 }
 
 .icon {
-  font-size: 6em;
-  margin-right: 1rem;
+  font-size: 4rem;
   background-color: #ebf0eb;
   border-radius: 10%;
   padding: 1rem;
+  min-width: 80px;
+  text-align: center;
 }
 
 .card-title {
-  font-size: 2em;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
-
 }
 
 .card-description {
-  font-size: 1.2em;
-  color: #000000;
+  font-size: 1rem;
+  color: #000;
 }
 
-/* Scroll-Driven Animation Support */
+/* Scroll-Driven Animation (Optional if supported) */
 @supports (animation-timeline: view()) {
   .card {
     --index0: calc(var(--index) - 1);
@@ -88,9 +85,9 @@ body {
   }
 
   @keyframes scale {
-  to {
-    transform: scale(1); /* No scaling */
-  }
+    to {
+      transform: scale(1);
+    }
   }
 
   .card__content {
@@ -99,5 +96,62 @@ body {
     animation: linear scale forwards;
     animation-timeline: --cards-element-scrolls-in-body;
     animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+  }
+}
+
+/* ✅ Responsive Queries */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    padding: 0.8rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+
+  .programs-container {
+    padding: 1.5rem 0.5rem;
   }
 }
