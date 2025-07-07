@@ -24,7 +24,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border"
+              ? "text-[#000000] border-[#ffffff] font-bold animated-border"
               : "hover:text-[#000000]"
           }
         >
