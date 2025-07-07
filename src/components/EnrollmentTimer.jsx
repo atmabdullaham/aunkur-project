@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 // import aunkurVideo from "../assets/aunkur.mp4";
 import aunkurTimerCardGif from "../assets/aunkur-timer-card-animation.gif";
 import { FaRegCalendarAlt } from "react-icons/fa";
-import { div } from "motion/react-client";
 
 const EnrollmentTimer = () => {
   const [enrollmentEnd] = useState(new Date("2025-09-30T23:59:00"));

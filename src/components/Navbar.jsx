@@ -3,7 +3,6 @@ import logo from "../assets/logo.png";
 import toast from "react-hot-toast";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import { div, section, ul } from "motion/react-client";
 import "./style.css";
 
 const Navbar = () => {

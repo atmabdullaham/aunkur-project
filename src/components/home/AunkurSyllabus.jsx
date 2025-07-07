@@ -1,53 +1,68 @@
 import React from "react";
 import { MdStarPurple500 } from "react-icons/md";
+
 const syllabusData = [
   {
     title: "৪র্থ শ্রেণির সিলেবাস",
     subjects: ["বাংলা", "বিজ্ঞান", "গণিত", "ইংরেজি"],
-    viewLink: "#",
-    downloadLink: "#",
+    viewLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
+    downloadLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
     upcoming: false,
   },
   {
     title: "৫ম শ্রেণির সিলেবাস",
     subjects: ["বাংলা", "বিজ্ঞান", "গণিত", "ইংরেজি"],
-    viewLink: "#",
-    downloadLink: "#",
+    viewLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
+    downloadLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
     upcoming: false,
   },
   {
     title: "৬ষ্ঠ শ্রেণির সিলেবাস",
     subjects: ["বাংলা", "বিজ্ঞান", "গণিত", "ইংরেজি"],
-    viewLink: "#",
-    downloadLink: "#",
+    viewLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
+    downloadLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
     upcoming: false,
   },
   {
     title: "৭ম শ্রেণির সিলেবাস",
     subjects: ["বাংলা", "বিজ্ঞান", "গণিত", "ইংরেজি"],
-    viewLink: "#",
-    downloadLink: "#",
+    viewLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
+    downloadLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
     upcoming: false,
   },
   {
     title: "৮ম শ্রেণির সিলেবাস",
     subjects: ["বাংলা", "বিজ্ঞান", "গণিত", "ইংরেজি"],
-    viewLink: "#",
-    downloadLink: "#",
+    viewLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
+    downloadLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
     upcoming: false,
   },
   {
     title: "৯ম শ্রেণির সিলেবাস",
     subjects: ["বাংলা", "বিজ্ঞান", "গণিত", "ইংরেজি"],
-    viewLink: "#",
-    downloadLink: "#",
+    viewLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
+    downloadLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
     upcoming: false,
   },
   {
     title: "১০ শ্রেণির সিলেবাস",
     subjects: ["বাংলা", "বিজ্ঞান", "গণিত", "ইংরেজি"],
-    viewLink: "#",
-    downloadLink: "#",
+    viewLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
+    downloadLink:
+      "https://drive.google.com/file/d/1xiTM93cRsWKR4DepowkcIXEhScZ1gXL1/view?usp=sharing",
     upcoming: false,
   },
   {
@@ -57,8 +72,15 @@ const syllabusData = [
     downloadLink: "",
     upcoming: true,
   },
-  // ...add more upcoming if needed
 ];
+
+// 🔽 Utility to get direct download link
+const getDirectDownloadLink = (driveViewLink) => {
+  const match = driveViewLink.match(/\/d\/(.*?)\//);
+  return match
+    ? `https://drive.google.com/uc?export=download&id=${match[1]}`
+    : driveViewLink;
+};
 
 const DownloadIcon = () => (
   <svg width="18" height="18" fill="none" className="mr-1 inline">
@@ -69,12 +91,6 @@ const DownloadIcon = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-  </svg>
-);
-
-const StarIcon = () => (
-  <svg width="16" height="16" fill="gold" className="mr-1 inline">
-    <polygon points="8,2 10,6.5 15,6.5 11,10 12.5,15 8,12.5 3.5,15 5,10 1,6.5 6,6.5" />
   </svg>
 );
 
@@ -95,7 +111,7 @@ const AunkurSyllabus = () => {
             {item.upcoming ? (
               <div className="min-h-[260px] bg-white rounded-2xl flex items-center justify-center shadow w-full h-full">
                 <div className="animate-border rounded-full p-[2px] inline-block">
-                  <button className="text-lg px-6 py-2  bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-3xl font-semibold shadow-md tracking-wide">
+                  <button className="text-lg px-6 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-3xl font-semibold shadow-md tracking-wide">
                     UpComing..
                   </button>
                 </div>
@@ -113,16 +129,17 @@ const AunkurSyllabus = () => {
                     </li>
                   ))}
                 </ul>
-                <button
+                <a
+                  href={item.viewLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full mb-2 py-2 border-2 border-green-600 rounded-md bg-green-50 text-green-700 font-semibold text-base flex items-center justify-center gap-2 hover:bg-green-100 transition"
-                  type="button"
                 >
                   বিস্তারিত দেখুন
-                </button>
+                </a>
                 <a
-                  href={item.downloadLink}
+                  href={getDirectDownloadLink(item.downloadLink)}
                   className="w-full py-2 rounded-md bg-gradient-to-r from-green-500 to-blue-500 border-none hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 font-semibold text-base flex items-center justify-center gap-2 hover:bg-green-700 text-white"
-                  download
                 >
                   <DownloadIcon />
                   ডাউনলোড করুন
