@@ -11,7 +11,7 @@ body {
 }
 
 .programs-container {
-  max-width: 80vw;
+  max-width: 60vw;
   margin: 0 auto;
   padding: 2rem 0;
 }
@@ -41,10 +41,11 @@ body {
 .card {
   position: sticky;
   top: 150px;
-  padding-top: calc(var(--index) * var(--card-top-offset));
+  padding-top: var(--card-top-offset);
   margin-bottom: 2rem;
   will-change: transform;
   transform-origin: 50% 0%;
+  transform: none; /* Remove any transformations */
 }
 
 .card__content {
@@ -52,14 +53,19 @@ body {
   align-items: center;
   padding: 1rem;
   border-radius: 1rem;
-  background:radial-gradient(circle, rgb(255, 255, 255), rgb(255, 255, 255));
-  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  /* background-color: rgba(22, 163, 74, 0.3); 
+  backdrop-filter: blur(30px);*/
+  box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.05), 0 0.5em 1em rgba(0, 0, 0, 0.05);
+  border-top: 3px solid rgba(20, 59, 255, 0.856);
 }
 
 .icon {
   font-size: 6em;
   margin-right: 1rem;
-
+  background-color: #ebf0eb;
+  border-radius: 10%;
+  padding: 1rem;
 }
 
 .card-title {
@@ -78,13 +84,13 @@ body {
   .card {
     --index0: calc(var(--index) - 1);
     --reverse-index: calc(var(--numcards) - var(--index0));
-    --reverse-index0: calc(var(--reverse-index) - 1);
+    --reverse-index0: calc(var(--reverse-index) - 2);
   }
 
   @keyframes scale {
-    to {
-      transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
-    }
+  to {
+    transform: scale(1); /* No scaling */
+  }
   }
 
   .card__content {

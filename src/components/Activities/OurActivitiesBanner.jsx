@@ -1,10 +1,11 @@
 import React from "react";
 import Image_1 from "../../assets/activities_1.png";
 import Image_2 from "../../assets/activities_2.png";
-import Image_3 from "../../assets/activities_3.png";
+// import Image_3 from "../../assets/activities_3.png";
 import Image_4 from "../../assets/activities_4.png";
 import Image_5 from "../../assets/activities_5.png";
 import Image_6 from "../../assets/activities_6.png";
+import Image_7 from "../../assets/activities_7.png";
 
 const OurActivitiesBanner = () => {
   return (
@@ -40,7 +41,7 @@ const OurActivitiesBanner = () => {
               className="w-1/2 h-auto object-cover rounded-full border border-amber-400 shadow-2xl"
             />
             <img
-              src={Image_3}
+              src={Image_5}
               alt="Person"
               className="w-1/4 h-auto object-cover rounded-2xl border border-amber-400 shadow-2xl"
             />
@@ -63,12 +64,12 @@ const OurActivitiesBanner = () => {
           {/* Bottom Row */}
           <div className="col-span-2 flex justify-center gap-4">
             {/* <img
-              src={Image_5}
+              src={Image_3}
               alt="Session"
               className="w-1/4 h-auto object-cover rounded-full border border-white shadow"
             /> */}
             <img
-              src={Image_1}
+              src={Image_7}
               alt="Team"
               className="w-1/2 h-auto object-cover rounded-full border border-amber-400 shadow-2xl"
             />
