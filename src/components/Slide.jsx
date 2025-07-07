@@ -6,7 +6,7 @@ const Slide = ({ text, image }) => {
   return (
     <div className="w-full  flex flex-col md:flex-row h-[38rem] items-center justify-center">
       {/* text */}
-      <div className=" flex items-center justify-center w-full md:w-1/2 h-full  ">
+      {/* <div className=" flex items-center justify-center w-full md:w-1/2 h-full  ">
         <div className="text-center">
           <motion.h1
             initial={{ y: 15, opacity: 0 }}
@@ -34,22 +34,22 @@ const Slide = ({ text, image }) => {
             to="/find-tutors"
             className=" px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-red-400 rounded-md lg:w-auto hover:bg-red-500 focus:outline-none focus:bg-gray-500"
           >
-            Book a Demo
+            Book 
           </Link>
         </div>
-      </div>
+      </div> */}
       {/* image */}
-      <div className="w-full md:w-1/2  h-full">
-        <motion.img
-          initial={{ opacity: 0.8, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 10,
-            delay: 1,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
+      <div className="w-full h-full">
+        <img
+          // initial={{ opacity: 0.9, scale: 1 }}
+          // animate={{ opacity: 1, scale: 1 }}
+          // transition={{
+          //   duration: 10,
+          //   delay: 1,
+          //   ease: "easeInOut",
+          //   repeat: Infinity,
+          //   repeatType: "reverse",
+          // }}
           className=""
           src={image}
           alt=""

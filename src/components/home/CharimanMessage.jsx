@@ -1,48 +1,146 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/scrollbar";
+
+// import required modules
+import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
 
 const ChairmanMessage = () => {
   return (
-    <section className="border-2 border-green-600 rounded-xl p-6 md:flex md:items-start gap-6">
-      {/* Text Section */}
-      <div className="md:w-2/3 space-y-3">
-        <h2 className="text-xl font-bold text-green-700">চেয়ারম্যানের বাণী</h2>
-        <div>
-          <p className="text-lg font-semibold">সম্মানিত অভিভাবক/শিক্ষকমণ্ডলী</p>
-          <p className="font-bold">আসসালামু আলাইকুম</p>
-        </div>
-        <p className="text-justify leading-7 text-gray-700">
-          আমাদের জাতি হিসেবে বেশ সমৃদ্ধ ও আত্মমর্যাদাসম্পন্ন। আমাদের কাছে একটি
-          ঐতিহাসিক ইতিহাস যা আমাদেরকে বিশ্ব দরবারে উচ্চ আসনে সমাসীন করেছে। বিশ্ব
-          পরিবেশগুলো আমাদের পেছনের আন্তর্জাতিক মহত্বার দিবসের স্বীকৃতি যা আমাদের
-          জাতিসত্তাকে আরো অলংকৃত ও সমৃদ্ধ করেছে...{" "}
-          <span className="text-green-600 font-semibold cursor-pointer">
-            Read More
-          </span>
-        </p>
-
-        <div className="pt-4">
-          <p className="font-bold">প্রফেসর মোহাম্মদ নূরুলনবী</p>
-          <p className="text-sm">
-            চেয়ারম্যান
-            <br />
-            সাবেক অধ্যক্ষ,
-            <br />
-            রামগড় সরকারি কলেজ, খাগড়াছড়ি
+    <>
+      <Swiper
+        direction={"vertical"}
+        slidesPerView={"auto"}
+        freeMode={true}
+        scrollbar={true}
+        mousewheel={true}
+        modules={[FreeMode, Scrollbar, Mousewheel]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <h4>Scroll Container</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus,
+            ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet
+            dolor lectus eu libero. Vestibulum venenatis eget turpis sed
+            faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam
+            elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean
+            tristique nisl tellus, sit amet fringilla nisl volutpat cursus.
+            Quisque dignissim lectus ac nunc consectetur mattis. Proin vel
+            hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et
+            tincidunt tristique, nisl risus facilisis lectus, ut interdum orci
+            nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit
+            sodales posuere eget non est. Fusce convallis vestibulum dolor non
+            volutpat. Vivamus vestibulum quam ut ultricies pretium.
           </p>
-        </div>
-      </div>
-
-      {/* Image Section */}
-      <div className="md:w-1/3 flex justify-center mt-6 md:mt-0">
-        <div className="relative w-52 h-52 rounded-full border-4 border-green-500 flex items-center justify-center">
-          <img
-            src="https://images.unsplash.com/photo-1603415526960-f7e0328f7d4a"
-            alt="Chairman"
-            className="rounded-full w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
+          <p>
+            Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna
+            consectetur convallis non vel mi. Donec libero dolor, volutpat ut
+            urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel
+            scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis
+            ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque
+            iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus,
+            sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare
+            nunc vel tellus facilisis, quis dictum elit tincidunt. Donec
+            accumsan nisi at laoreet sodales. Cras at ullamcorper massa.
+            Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.
+          </p>
+          <p>
+            Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat
+            elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit.
+            Integer tincidunt finibus metus vel porta. Mauris sed mauris congue,
+            pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu
+            et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium
+            tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.
+          </p>
+          <p>
+            Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi
+            id tempor vulputate, nisi justo cursus justo, pellentesque
+            condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus. In placerat
+            tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis
+            et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet
+            pellentesque orci aliquam. Vestibulum elementum posuere vehicula.
+          </p>
+          <p>
+            Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum
+            id arcu nec fringilla. Maecenas faucibus, ante et venenatis
+            interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis
+            vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh
+            sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor
+            fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare
+            libero. Aliquam auctor erat enim, a semper risus semper at. In ut
+            dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna,
+            sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut
+            nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet
+            lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh
+            in massa pretium scelerisque.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus,
+            ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet
+            dolor lectus eu libero. Vestibulum venenatis eget turpis sed
+            faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam
+            elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean
+            tristique nisl tellus, sit amet fringilla nisl volutpat cursus.
+            Quisque dignissim lectus ac nunc consectetur mattis. Proin vel
+            hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et
+            tincidunt tristique, nisl risus facilisis lectus, ut interdum orci
+            nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit
+            sodales posuere eget non est. Fusce convallis vestibulum dolor non
+            volutpat. Vivamus vestibulum quam ut ultricies pretium.
+          </p>
+          <p>
+            Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna
+            consectetur convallis non vel mi. Donec libero dolor, volutpat ut
+            urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel
+            scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis
+            ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque
+            iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus,
+            sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare
+            nunc vel tellus facilisis, quis dictum elit tincidunt. Donec
+            accumsan nisi at laoreet sodales. Cras at ullamcorper massa.
+            Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.
+          </p>
+          <p>
+            Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat
+            elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit.
+            Integer tincidunt finibus metus vel porta. Mauris sed mauris congue,
+            pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu
+            et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium
+            tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.
+          </p>
+          <p>
+            Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi
+            id tempor vulputate, nisi justo cursus justo, pellentesque
+            condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus. In placerat
+            tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis
+            et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet
+            pellentesque orci aliquam. Vestibulum elementum posuere vehicula.
+          </p>
+          <p>
+            Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum
+            id arcu nec fringilla. Maecenas faucibus, ante et venenatis
+            interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis
+            vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh
+            sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor
+            fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare
+            libero. Aliquam auctor erat enim, a semper risus semper at. In ut
+            dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna,
+            sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut
+            nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet
+            lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh
+            in massa pretium scelerisque.
+          </p>
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 };
 
