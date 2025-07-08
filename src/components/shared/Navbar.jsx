@@ -1,10 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import toast from "react-hot-toast";
 import { useContext } from "react";
-import { AuthContext } from "../providers/AuthProvider";
+import { AuthContext } from "../../providers/AuthProvider";
 import { div, section, ul } from "motion/react-client";
-import "./style.css";
+import "../style/style.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -169,8 +169,8 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <NavLink className="btn" to="/registration">
-            Registration
+          <NavLink className="btn rounded-full" to="/registration">
+            রেজিস্ট্রেশন
           </NavLink>
           {!user && (
             <ul>

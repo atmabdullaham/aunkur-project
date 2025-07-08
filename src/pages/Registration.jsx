@@ -1,7 +1,7 @@
 import { useState } from "react";
-import RegistrationForm from "../components/RegistrationForm";
-import RegistrationStepsTimeline from "../components/RegistrationStepsTimeline";
-import Payment from "../components/Payment";
+import RegistrationStepsTimeline from "../components/registration/RegistrationStepsTimeline";
+import RegistrationForm from "../components/registration/RegistrationForm";
+import Payment from "../components/registration/Payment";
 
 const Registration = () => {
   const [formData, setFormData] = useState(null); // Stores form submission data

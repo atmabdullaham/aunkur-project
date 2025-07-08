@@ -1,10 +1,10 @@
-import Banner from "../components/Banner";
-import EnrollmentTimer from "../components/EnrollmentTimer";
+import Banner from "../components/home/Banner";
 import AunkurSyllabus from "../components/home/AunkurSyllabus";
 import ChairmanMessage from "../components/home/CharimanMessage";
 import HowToApply from "../components/home/HowToApply";
 import SuccessStatistics from "../components/home/SuccessStatistics";
 import WhyScholarshipProject from "../components/home/WhyScholarshipProject";
+import EnrollmentTimer from "../components/home/EnrollmentTimer";
 
 const Home = () => {
   return (
