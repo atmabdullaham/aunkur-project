@@ -16,7 +16,7 @@
       left: 0;
       width: 0;
       height: 2px;   /* Adjust this value to fit the height of the border */
-      background-color: #ff1e1e; /* Color of the border when active */
+      background-color: #000000; /* Color of the border when active */
       animation: borderGrow 2s infinite; /* Adjust the duration of the animation as needed */
     }
   }

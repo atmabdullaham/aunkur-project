@@ -8,6 +8,7 @@ import ApplicationCalendar from "../components/aunkurScholarship/ApplicationCale
 import EvaluationAndSelection from "../components/aunkurScholarship/EvaluationAndSelection";
 import FAQ from "../components/aunkurScholarship/FAQ";
 import Timer from "../components/aunkurScholarship/Timer";
+import ScholarshipProgramme from "../components/aunkurScholarship/ScholarshipProgramme";
 
 const AunkurScholarship = () => {
   return (
@@ -18,6 +19,7 @@ const AunkurScholarship = () => {
       <ApplicationSteps />
       <Eligibility />
       <ApplicationCalendar />
+      <ScholarshipProgramme />
       <EvaluationAndSelection />
       <FAQ />
     </div>
