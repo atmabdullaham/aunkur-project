@@ -109,7 +109,7 @@ const AunkurSyllabus = () => {
             className="animate-border to-blue-500 rounded-2xl p-[2px] transition-shadow duration-300"
           >
             {item.upcoming ? (
-              <div className="min-h-[260px] bg-white rounded-2xl flex items-center justify-center shadow w-full h-full">
+              <div className="min-h-[260px] bg-green-100 rounded-2xl flex items-center justify-center shadow w-full h-full">
                 <div className="animate-border rounded-full p-[2px] inline-block">
                   <button className="text-lg px-6 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-3xl font-semibold shadow-md tracking-wide">
                     UpComing..
@@ -117,7 +117,7 @@ const AunkurSyllabus = () => {
                 </div>
               </div>
             ) : (
-              <div className="bg-green-200 rounded-2xl items-center shadow p-7 min-h-[260px] flex flex-col w-full h-full">
+              <div className="bg-green-100 rounded-2xl items-center shadow p-7 min-h-[260px] flex flex-col w-full h-full">
                 <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                 <span className="inline-flex items-center bg-yellow-300 text-gray-800 px-3 py-1 rounded font-semibold text-sm mb-3 mt-1 shadow-sm">
                   <MdStarPurple500 className="mr-1" /> Subjects

@@ -133,7 +133,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <section className="bg-green-600/30 backdrop-blur-md sticky top-0 z-50 shadow-xl border-b border-emerald-200">
+    <section className="bg-green-600/20 backdrop-blur-md sticky top-0 z-50 shadow-xl border-b border-emerald-200">
       <div className="navbar font-tirobangla font-medium w-10/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
