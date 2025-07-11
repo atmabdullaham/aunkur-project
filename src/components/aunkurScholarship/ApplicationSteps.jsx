@@ -37,11 +37,11 @@ const ApplicationSteps = () => {
   ];
 
   return (
-    <div className="bg-white text-black py-16 px-6">
+    <div className="bg-green-100 text-black py-16 px-6">
       <h2 className="text-4xl font-bold text-center mb-5">
         Application in 5 Steps
       </h2>
-      <p className="text-center text-gray-500 mb-12">
+      <p className="text-center text-gray-600 mb-12">
         এই ৪টি ধাপ ফলো করে তুমিও হতে পারো পরবর্তী বিজয়ী, তাই এখনই রেজিস্ট্রেশন
         করে ফেলো।
       </p>
@@ -96,7 +96,7 @@ const ApplicationSteps = () => {
             )}
 
             {/* Step Icon Container */}
-            <div className="bg-white backdrop-blur-xl border border-amber-500 p-5 rounded-2xl shadow-lg w-[100px] h-[100px] flex items-center justify-center">
+            <div className="bg-white backdrop-blur-md border border-amber-500 p-5 rounded-2xl shadow-lg w-[100px] h-[100px] flex items-center justify-center">
               <div className="text-5xl">{step.icon}</div>
             </div>
 
@@ -109,7 +109,7 @@ const ApplicationSteps = () => {
             <h3 className="text-xl font-bold">{step.title}</h3>
 
             {/* Step Description */}
-            <p className="text-gray-400 text-sm">{step.description}</p>
+            <p className="text-gray-600 text-sm">{step.description}</p>
           </div>
         ))}
       </div>

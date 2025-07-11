@@ -119,7 +119,7 @@ const AunkurSyllabus = () => {
             ) : (
               <div className="bg-green-100 rounded-2xl items-center shadow p-7 min-h-[260px] flex flex-col w-full h-full">
                 <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                <span className="inline-flex items-center bg-yellow-300 text-gray-800 px-3 py-1 rounded font-semibold text-sm mb-3 mt-1 shadow-sm">
+                <span className="inline-flex items-center bg-white text-gray-800 px-3 py-1 rounded font-semibold text-sm mb-3 mt-1 shadow-sm">
                   <MdStarPurple500 className="mr-1" /> Subjects
                 </span>
                 <ul className="grid grid-cols-2 gap-x-4 pl-4 mb-4 text-gray-700 text-base">
