@@ -47,10 +47,10 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-10">
+    <div className="py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
-          FAQ <span className="text-green-600">সাধারণ জিজ্ঞাসা</span>
+          <span className="text-green-600">সাধারণ </span>জিজ্ঞাসা
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* FAQ Section */}
@@ -133,7 +133,7 @@ const FAQ = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full bg-green-400 text-black py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 Submit
               </button>
