@@ -25,66 +25,77 @@ const Timer = () => {
   const endTimeDiff = timeDiff(enrollmentEnd);
 
   return (
-    <div className="bg-green-100 px-4 py-6 sm:px-6 md:px-8 lg:px-10">
-      <div className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 max-w-5xl mx-auto">
-        <h2 className="text-[#0AA76B] bg-[#E5FFF5] rounded-lg p-4 sm:p-6 flex items-center justify-center gap-x-2 text-lg sm:text-2xl md:text-3xl font-bold mb-6 text-center">
-          <GiTrophyCup className="text-xl sm:text-2xl md:text-3xl" />
+    <section className="bg-green-100 px-4 py-12 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto rounded-2xl p-6 sm:p-10">
+        {/* Heading */}
+        <h2 className="flex items-center justify-center gap-3 text-xl sm:text-2xl md:text-3xl font-bold text-[#0AA76B] bg-white bg-opacity-50 backdrop-blur-xl rounded-xl shadow-inner p-4 mb-8 text-center">
+          <GiTrophyCup className="text-2xl sm:text-3xl" />
           Become an Aunkur Scholarship Holder!
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-center flex-1">
-            <h3 className="font-bold text-sm sm:text-base md:text-lg mb-2">
+        {/* Countdown */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+          {/* Start Info */}
+          <div className="text-center md:flex-1">
+            <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-1">
               Enrollment Starts
             </h3>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-semibold">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
               July 10, 2025
             </p>
           </div>
 
-          <div className="text-center flex-1">
-            <h3 className="font-bold text-sm sm:text-base md:text-lg mb-2">
+          {/* Countdown Box */}
+          <div className="text-center md:flex-1">
+            <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-1">
               Enrollment Ends
             </h3>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-semibold mb-3">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-medium mb-4">
               September 30, 2025
             </p>
-            <div className="flex justify-center flex-wrap gap-2 text-[#0CA96D]">
-              <span className="border-2 px-2 py-1 sm:px-3 sm:py-2 rounded-lg text-xs sm:text-sm md:text-base">
-                {endTimeDiff.days}d
-              </span>
-              <span className="border-2 px-2 py-1 sm:px-3 sm:py-2 rounded-lg text-xs sm:text-sm md:text-base">
-                {endTimeDiff.hours}h
-              </span>
-              <span className="border-2 px-2 py-1 sm:px-3 sm:py-2 rounded-lg text-xs sm:text-sm md:text-base">
-                {endTimeDiff.minutes}m
-              </span>
-              <span className="bg-amber-300 text-blue-900 border-2 px-2 py-1 sm:px-3 sm:py-2 rounded-lg text-xs sm:text-sm md:text-base">
-                {endTimeDiff.seconds}s
-              </span>
+            <div className="flex justify-center flex-wrap gap-3">
+              {[
+                { label: "d", value: endTimeDiff.days },
+                { label: "h", value: endTimeDiff.hours },
+                { label: "m", value: endTimeDiff.minutes },
+                { label: "s", value: endTimeDiff.seconds },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="px-4 py-2 sm:px-5 sm:py-3 bg-white bg-opacity-50 backdrop-blur-xl rounded-xl shadow-inner text-2xl sm:text-3xl font-bold text-green-800"
+                >
+                  {item.value}
+                  <span className="ml-1 text-sm text-gray-600 font-medium">
+                    {item.label}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-6">
-          <p className="text-center flex items-center justify-center gap-x-2 px-2 text-xs sm:text-sm md:text-base text-gray-800">
-            <PiWarningCircleBold className="text-base sm:text-lg md:text-xl" />
-            রেজিস্ট্রেশন শেষের সময় হচ্ছে সেপ্টেম্বর 30, 2025 এর রাত 11:59 ।
-            এরপর কোনও রেজিস্ট্রেশন গ্রহণ করা হবে না।
+        {/* Notice */}
+        <div className="mt-8">
+          <p className="text-center flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base text-gray-700">
+            <PiWarningCircleBold className="text-base sm:text-lg md:text-xl text-red-500" />
+            রেজিস্ট্রেশন শেষের সময়: সেপ্টেম্বর ৩০, ২০২৫ রাত ১১:৫৯। এরপর কোনও
+            রেজিস্ট্রেশন গ্রহণ করা হবে না।
           </p>
         </div>
 
-        <p className="text-center text-green-500 mt-4 text-sm sm:text-base md:text-lg font-medium">
-          রেজিস্ট্রেশন ফি ২০০ টাকা
+        {/* Fee Info */}
+        <p className="text-center text-green-600 mt-4 text-sm sm:text-base md:text-lg font-semibold">
+          রেজিস্ট্রেশন ফি: ২০০ টাকা
         </p>
 
+        {/* Button */}
         <div className="text-center mt-6">
-          <button className="px-5 py-2 bg-green-500 hover:bg-green-600 transition-all text-white rounded text-sm sm:text-base md:text-lg w-full sm:w-auto">
+          <button className="bg-gradient-to-r from-green-400 to-green-600 hover:scale-105 transition-transform duration-300 text-white px-6 py-3 rounded-xl text-sm sm:text-base md:text-lg font-semibold shadow-md">
             Enroll Now
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
