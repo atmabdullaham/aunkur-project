@@ -83,7 +83,7 @@ const SuccessStatistics = () => {
   };
 
   return (
-    <section className="bg-green-100 py-8 md:py-16 px-4">
+    <section className="bg-gradient-to-br from-green-50 to-blue-50 py-8 md:py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -113,7 +113,7 @@ const SuccessStatistics = () => {
 
 const StatisticCard = ({
   targetNumber,
-  suffix,
+
   label,
   icon,
   convertToBengali,
@@ -180,7 +180,7 @@ const StatisticCard = ({
   return (
     <div
       ref={cardRef}
-      className="bg-white border-2 border-green-200 rounded-xl p-8 text-center hover:border-green-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+      className="bg-green-100  border-green-200 rounded-xl p-8 text-center hover:border-green-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
     >
       <div className="flex justify-center mb-6">{icon}</div>
       <div className="mb-4">
