@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Slide = ({ text, image }) => {
   return (
-    <div className="w-full  flex flex-col md:flex-row h-[38rem] items-center justify-center">
+    <div className="w-full  flex flex-col md:flex-row  items-center justify-center">
       {/* text */}
       {/* <div className=" flex items-center justify-center w-full md:w-1/2 h-full  ">
         <div className="text-center">

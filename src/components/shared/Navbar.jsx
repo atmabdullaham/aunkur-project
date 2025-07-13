@@ -132,11 +132,15 @@ const Navbar = () => {
     </>
   );
   return (
-    <section className="bg-green-600/20 backdrop-blur-md sticky top-0 z-50 shadow-xl border-b border-emerald-200">
-      <div className="navbar font-tirobangla font-medium w-10/12 mx-auto">
+    <section className="bg-green-600/20 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-200">
+      <div className="navbar font-tirobangla font-medium md:w-10/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost m-0 p-0 lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -160,15 +164,15 @@ const Navbar = () => {
               {navOptions}
             </ul>
           </div>
-          <a className="btn bg-transparent shadow-none border-0">
-            <img className="w-30 h-10" src={logo} alt="" />
+          <a className="btn bg-transparent  shadow-none border-0">
+            <img className="w-24 h-8 md:w-30 md:h-10" src={logo} alt="" />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <NavLink className="btn rounded-full" to="/registration">
+          <NavLink className="btn btn-sm rounded-full" to="/registration">
             রেজিস্ট্রেশন
           </NavLink>
           {!user && (
@@ -176,10 +180,10 @@ const Navbar = () => {
               {" "}
               <li>
                 <Link
-                  className="bg-green-500 hover:bg-green-600 text-white font-semibold py-1.5 px-4 rounded-md"
+                  className="btn btn-sm bg-green-500 hover:bg-green-600 text-white font-semibold py-1.5 px-4 rounded-md"
                   to="/login"
                 >
-                  লগ-ইন
+                  লগইন
                 </Link>
               </li>
             </ul>

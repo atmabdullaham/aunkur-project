@@ -62,6 +62,20 @@ const ActivitiesVideos = () => {
           </div>
         ))}
       </div>
+
+      {/* Facebook Video Embed */}
+      <div className="mt-8">
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAunkur85%2Fvideos%2F1193347828976372%2F&show_text=false&width=560&t=0"
+          width="560"
+          height="314"
+          style={{ border: "none", overflow: "hidden" }}
+          scrolling="no"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
   );
 };
