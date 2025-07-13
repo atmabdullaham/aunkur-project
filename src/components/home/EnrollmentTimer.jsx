@@ -43,34 +43,32 @@ const EnrollmentTimer = () => {
         {/* Countdown and Info */}
         <div className="flex flex-col items-center md:items-start gap-6">
           {/* Countdown */}
-          <div className="flex gap-4 mb-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-2">
             <div className="flex flex-col items-center">
               <span className="bg-green-100 bg-opacity-30 backdrop-blur-xl text-black font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
                 {String(timeLeft.days).padStart(2, "0")}
               </span>
               <span className="text-xs text-gray-400 mt-1">Days</span>
             </div>
-            <span className="text-3xl text-gray-500 font-bold flex items-center">
-              :
-            </span>
+
             <div className="flex flex-col items-center">
               <span className="bg-green-100 bg-opacity-30 backdrop-blur-md text-black font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
                 {String(timeLeft.hours).padStart(2, "0")}
               </span>
               <span className="text-xs text-gray-400 mt-1">Hours</span>
             </div>
-            <span className="text-3xl text-gray-500 font-bold flex items-center">
+            {/* <span className="text-3xl text-gray-500 font-bold flex items-center">
               :
-            </span>
+            </span> */}
             <div className="flex flex-col items-center">
               <span className="bg-green-100 bg-opacity-30 backdrop-blur-md text-black  font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
                 {String(timeLeft.minutes).padStart(2, "0")}
               </span>
               <span className="text-xs text-gray-400 mt-1">Minutes</span>
             </div>
-            <span className="text-3xl text-gray-500 font-bold flex items-center">
+            {/* <span className="text-3xl text-gray-500 font-bold flex items-center">
               :
-            </span>
+            </span> */}
             <div className="flex flex-col items-center">
               <span className="bg-green-100 bg-opacity-30 backdrop-blur-md text-blue-500 border border-amber-300 font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
                 {String(timeLeft.seconds).padStart(2, "0")}
@@ -79,22 +77,23 @@ const EnrollmentTimer = () => {
             </div>
           </div>
           {/* Main Heading */}
-          <div className="text-right md:text-left">
+          <div className="text-center md:text-left">
             <h2 className="text-xl md:text-2xl font-bold text-black leading-snug mb-2">
-              অঙ্কুর স্টুডেন্ট অফ দ্য{" "}
-              <span className="text-blue-500">ইয়ার ২০২৫ হতে চাও?</span> বৃত্তি
-              পরীক্ষায় অংশ নিতে এখনই এনরোল করো!{" "}
+              সেরাদের সেরা হয়ে, নিজেকে
+              <span className="text-blue-500"> প্রমাণ করার চ্যালেঞ্জ</span> নিতে
+              চাইলে আজই এনরুল করে ফেলো
             </h2>
           </div>
           {/* Dates */}
           <div className="text-gray-400 text-sm md:text-base font-medium space-y-1">
             <div className="flex items-center">
               <FaRegCalendarAlt className="text-xl text-gray-600 mr-2" />
-              এনরোলমেন্ট শুরু: <span className="text-black">১ জুন, ২০২৫</span>
+              এনরোলমেন্ট শুরু: <span className="text-black"> ১ জুন, ২০২৫</span>
             </div>
             <div className="flex items-center">
               <FaRegCalendarAlt className="text-xl text-gray-600 mr-2" />
-              এনরোলমেন্ট শেষ: <span className="text-black">২৪ জুন, ২০২৫</span>
+              এনরোলমেন্ট শেষ:
+              <span className="text-black"> ৩০ সেপ্টেম্বর, ২০২৫</span>
             </div>
           </div>
           {/* Button */}
