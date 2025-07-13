@@ -14,7 +14,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 const Banner = () => {
   return (
     <div className="bg-green-100/40 ">
-      <div className="flex flex-col md:h-[calc(100vh-200px)] md:flex-row items-center justify-between gap-8 px-4 py-8  lg:w-10/12 mx-auto">
+      <div className="flex flex-col md:h-[calc(100vh-200px)] md:flex-row items-center justify-between gap-8 px-4 py-4 md:py-8  lg:w-10/12 mx-auto">
         {/* text div */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-2xl md:text-3xl lg:text-4xl text-green-700 font-bold mb-4 text-center">

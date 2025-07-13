@@ -83,7 +83,7 @@ const SuccessStatistics = () => {
   };
 
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-green-100 py-8 md:py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">

@@ -2,7 +2,7 @@ import React from "react";
 
 const HowToApply = () => {
   return (
-    <div className=" flex flex-col md:flex-row items-center gap-10  md:p-10 w-10/12 mx-auto my-24">
+    <div className=" flex flex-col md:flex-row items-center gap-10  py-10 md:py-14 w-10/12 mx-auto ">
       {/* Video Section */}
       <div className="w-full md:w-1/2  flex flex-col items-center">
         <div className="rounded-xl border-4 border-[#32DE4D] overflow-hidden shadow-lg  w-full h-52 md:h-80   bg-gray-200">

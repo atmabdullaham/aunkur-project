@@ -96,7 +96,7 @@ const DownloadIcon = () => (
 
 const AunkurSyllabus = () => {
   return (
-    <div className="w-10/12 mx-auto md:px-4 py-24">
+    <div className="w-10/12 mx-auto md:px-4 py-14 md:py-18 lg:py-24">
       <h1 className="text-center font-bold text-3xl mb-2">সিলেবাস</h1>
       <p className="text-center text-gray-600 mb-8 text-base">
         নিচের দেওয়া সিলেবাস গুলো থেকে তোমার শ্রেণির সিলেবাস ডাউনলোড করে এখনি

@@ -2,7 +2,7 @@ import React from "react";
 
 const WhyScholarshipProject = () => {
   return (
-    <div className="bg-gradient-to-br from-green-50 to-blue-50 py-30 md:px-4">
+    <div className="bg-gradient-to-br from-green-50 to-blue-50  py-8 md:py-24 lg:py-30 md:px-4">
       <div className="w-10/12 mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

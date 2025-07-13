@@ -26,7 +26,7 @@ const EnrollmentTimer = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-green-50 to-blue-50 py-16 px-4">
+    <div className="bg-gradient-to-br from-green-50 to-blue-50 py-4 md:py-16 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-5xl mx-auto bg-green-100 bg-opacity-30 backdrop-blur-md rounded-2xl shadow-lg p-6 md:p-10 my-10 gap-8 items-center  ">
         {/* Video (unchanged) */}
         <div>
