@@ -2,8 +2,8 @@ import React from "react";
 
 const WhyScholarshipProject = () => {
   return (
-    <div className="bg-gradient-to-br from-green-50 to-blue-50 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="bg-gradient-to-br from-green-50 to-blue-50 py-30 px-4">
+      <div className="w-10/12 mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -11,17 +11,17 @@ const WhyScholarshipProject = () => {
             Project?
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            এই অ্যাপ ব্যবহার করে তুমিও হতে পারো একটি মেরিটরি বিজেতা, তাই এখনই
-            রেজিস্ট্রেশন কর ফেনোসায়।
+            This initiative is designed to encourage hard work and reward
+            excellence.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
           {/* Recognition of Talent */}
-          <div className="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="card bg-green-100 shadow-lg hover:shadow-xl transition-shadow duration-300 ">
             <div className="card-body p-8">
-              <div className="flex items-center mb-6">
+              <div className="flex flex-col md:flex-row items-center mb-6">
                 <div className="bg-green-100 p-4 rounded-full mr-4">
                   <svg
                     className="w-8 h-8 text-green-500"
@@ -43,9 +43,9 @@ const WhyScholarshipProject = () => {
           </div>
 
           {/* Access to Opportunities */}
-          <div className="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="card bg-cyan-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="card-body p-8">
-              <div className="flex items-center mb-6">
+              <div className="flex  flex-col md:flex-row items-center mb-6">
                 <div className="bg-cyan-100 p-4 rounded-full mr-4">
                   <svg
                     className="w-8 h-8 text-cyan-500"
@@ -67,9 +67,9 @@ const WhyScholarshipProject = () => {
           </div>
 
           {/* Challenge-Taking Student */}
-          <div className="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="card bg-pink-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="card-body p-8">
-              <div className="flex items-center mb-6">
+              <div className="flex flex-col md:flex-rowitems-center mb-6">
                 <div className="bg-pink-100 p-4 rounded-full mr-4">
                   <svg
                     className="w-8 h-8 text-pink-500"
@@ -92,9 +92,9 @@ const WhyScholarshipProject = () => {
           </div>
 
           {/* Support for Future Leaders */}
-          <div className="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="card bg-purple-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="card-body p-8">
-              <div className="flex items-center mb-6">
+              <div className="flex flex-col md:flex-row items-center mb-6">
                 <div className="bg-purple-100 p-4 rounded-full mr-4">
                   <svg
                     className="w-8 h-8 text-purple-500"

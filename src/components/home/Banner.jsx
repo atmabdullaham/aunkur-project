@@ -13,7 +13,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="bg-green-600/20 ">
+    <div className="bg-green-100/40 ">
       <div className="flex flex-col md:h-[calc(100vh-200px)] md:flex-row items-center justify-between gap-8 px-4 py-8  lg:w-10/12 mx-auto">
         {/* text div */}
         <div className="md:w-1/2 text-center md:text-left">
@@ -22,7 +22,7 @@ const Banner = () => {
           </h1>
           <p className="text-gray-600 md:text-center text-justify">
             একবিংশ শতাব্দীর চ্যালেঞ্জ মোকাবেলায় নৈতিকতা বিবর্জিত শিক্ষা
-            ব্যবস্থার অসারতার প্রতিকূলে অনুপম চরিত্র মেধার সুনিপুন বিকাশ ও
+            ব্যবস্থার অসারতার প্রতিকূলে অনুপম চরিত্র, মেধার সুনিপুন বিকাশ ও
             স্বপ্নছোঁয়ার সুনিবিড় তত্ত্বাবধানে
           </p>
         </div>

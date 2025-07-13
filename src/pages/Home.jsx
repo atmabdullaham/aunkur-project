@@ -1,6 +1,6 @@
 import Banner from "../components/home/Banner";
 import AunkurSyllabus from "../components/home/AunkurSyllabus";
-import ChairmanMessage from "../components/home/CharimanMessage";
+
 import HowToApply from "../components/home/HowToApply";
 import SuccessStatistics from "../components/home/SuccessStatistics";
 import WhyScholarshipProject from "../components/home/WhyScholarshipProject";
@@ -21,7 +21,6 @@ const Home = () => {
       {/* Successs Statistics */}
       <SuccessStatistics></SuccessStatistics>
       {/* Chairman message */}
-      <ChairmanMessage></ChairmanMessage>
     </div>
   );
 };

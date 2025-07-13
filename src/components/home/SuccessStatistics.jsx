@@ -28,7 +28,7 @@ const SuccessStatistics = () => {
           fill="currentColor"
           viewBox="0 0 24 24"
         >
-          <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+          <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
         </svg>
       ),
     },
@@ -43,13 +43,13 @@ const SuccessStatistics = () => {
           fill="currentColor"
           viewBox="0 0 24 24"
         >
-          <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+          <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
         </svg>
       ),
     },
     {
       id: 4,
-      targetNumber: 15,
+      targetNumber: 25,
       suffix: "+",
       label: "Years Of Org",
       icon: (
@@ -90,10 +90,7 @@ const SuccessStatistics = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Our <span className="text-green-500">Success</span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            এই অ্যাপ ব্যবহার করে তুমিও হতে পারো একটি মেরিটরি বিজেতা, তাই এখনই
-            রেজিস্ট্রেশন কর ফেনোসায়।
-          </p>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto"></p>
         </div>
 
         {/* Statistics Grid */}

@@ -96,7 +96,7 @@ const DownloadIcon = () => (
 
 const AunkurSyllabus = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="w-10/12 mx-auto md:px-4 py-24">
       <h1 className="text-center font-bold text-3xl mb-2">সিলেবাস</h1>
       <p className="text-center text-gray-600 mb-8 text-base">
         নিচের দেওয়া সিলেবাস গুলো থেকে তোমার শ্রেণির সিলেবাস ডাউনলোড করে এখনি
@@ -122,7 +122,7 @@ const AunkurSyllabus = () => {
                 <span className="inline-flex items-center bg-white text-gray-800 px-3 py-1 rounded font-semibold text-sm mb-3 mt-1 shadow-sm">
                   <MdStarPurple500 className="mr-1" /> Subjects
                 </span>
-                <ul className="grid grid-cols-2 gap-x-4 pl-4 mb-4 text-gray-700 text-base">
+                <ul className="grid grid-cols-2 gap-x-2 pl-4 mb-4 text-gray-700 text-base">
                   {item.subjects.map((sub, i) => (
                     <li key={i} className="mb-1 list-disc list-inside">
                       {sub}
