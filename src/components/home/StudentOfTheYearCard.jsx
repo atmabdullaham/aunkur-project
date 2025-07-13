@@ -14,7 +14,7 @@ const StudentOfTheYearCard = ({
 }) => {
   console.log(bgColor);
   return (
-    <div className={`card w-96 ${bgColor}  shadow-sm `}>
+    <div className={`card md:w-96 ${bgColor}  shadow-sm `}>
       <div className="card-body space-y-4">
         <div className="flex justify-between items-center">
           <FaQuoteLeft className={`text-4xl ${quoteColor}`} />
