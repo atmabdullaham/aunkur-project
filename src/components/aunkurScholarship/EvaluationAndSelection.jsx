@@ -18,16 +18,16 @@ const EvaluationAndSelection = () => {
   };
 
   return (
-    <div className="bg-green-100">
-      <div className="py-10 px-5 max-w-4xl mx-auto">
+    <section className="bg-green-100 px-4 py-12 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 className="text-3xl font-bold text-center mb-6">
           Evaluation and <span className="text-green-500">Selection</span>{" "}
           Process
         </h2>
         <p className="text-center text-gray-600 mb-8">
-          Applications for Türkiye Scholarships are considered according to the
-          candidate's academic success, social activities, and motivation
-          related to the chosen field.
+          Applications for Aunkur Scholarships are considered according to the
+          candidate's academic success, <br />
+          social activities, and motivation related to the chosen field.
         </p>
         <div className="space-y-4">
           {steps.map((step, index) => (
@@ -64,7 +64,7 @@ const EvaluationAndSelection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

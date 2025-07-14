@@ -47,14 +47,14 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="px-4 py-12 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
           <span className="text-green-600">সাধারণ </span>জিজ্ঞাসা
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* FAQ Section */}
-          <div className="bg-white shadow-xl rounded-lg p-6">
+          <div className="bg-green-100 shadow-xl rounded-lg p-6">
             {faqItems.map((item, index) => (
               <div
                 key={index}
@@ -81,7 +81,7 @@ const FAQ = () => {
           </div>
 
           {/* Contact Form Section */}
-          <div className="bg-white shadow-xl rounded-lg p-6">
+          <div className="bg-green-100 shadow-xl rounded-lg p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-4">
               আপনার প্রশ্ন আমাদেরকে পাঠান
             </h3>
@@ -99,7 +99,7 @@ const FAQ = () => {
                 <input
                   type="text"
                   id="name"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                  className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
                   placeholder="Your Name"
                 />
               </div>
@@ -113,7 +113,7 @@ const FAQ = () => {
                 <input
                   type="email"
                   id="email"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                  className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
                   placeholder="Your Email"
                 />
               </div>
@@ -127,7 +127,7 @@ const FAQ = () => {
                 <textarea
                   id="message"
                   rows="4"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                  className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
                   placeholder="Your Message"
                 ></textarea>
               </div>
@@ -141,7 +141,7 @@ const FAQ = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
