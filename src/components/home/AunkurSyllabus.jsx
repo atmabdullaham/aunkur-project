@@ -86,7 +86,18 @@ const DownloadIcon = () => (
   <svg width="18" height="18" fill="none" className="mr-1 inline">
     <path
       d="M9 2v10m0 0l-4-4m4 4l4-4M3 16h12"
-      stroke="#fff"
+      stroke="#0AA76B"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+const ViewIcon = () => (
+  <svg width="18" height="18" fill="none" className="mr-1 inline">
+    <path
+      d="M9 2l4 4H5l4-4zm0 14l-4-4h8l-4 4z"
+      stroke="#0AA76B"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -134,13 +145,14 @@ const AunkurSyllabus = () => {
                     href={item.viewLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full mb-2 py-2 border-2 border-green-600 rounded-md bg-green-50 text-green-700 font-semibold text-base flex items-center justify-center gap-2 hover:bg-green-100 transition"
+                    className="w-full mb-2 text-[#0AA76B] bg-white bg-opacity-50 backdrop-blur-xl shadow-inner py-2 px-4 rounded-lg hover:bg-green-100 transition font-semibold text-base flex items-center justify-center gap-2 hover:text-green-700"
                   >
+                    <ViewIcon />
                     বিস্তারিত দেখুন
                   </a>
                   <a
                     href={getDirectDownloadLink(item.downloadLink)}
-                    className="w-full py-2 rounded-md bg-gradient-to-r from-green-500 to-blue-500 border-none hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 font-semibold text-base flex items-center justify-center gap-2 hover:bg-green-700 text-white"
+                    className="w-full text-[#0AA76B] bg-white bg-opacity-50 backdrop-blur-xl shadow-inner py-2 px-4 rounded-lg hover:bg-green-100 transition font-semibold text-base flex items-center justify-center gap-2 hover:text-green-700"
                   >
                     <DownloadIcon />
                     ডাউনলোড করুন
