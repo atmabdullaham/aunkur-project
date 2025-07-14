@@ -2,8 +2,8 @@ import React from "react";
 
 const Eligibility = () => {
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto p-6 sm:p-10">
+    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-gray-800">
           Eligibility
         </h2>
@@ -40,7 +40,7 @@ const Eligibility = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

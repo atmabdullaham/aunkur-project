@@ -1,19 +1,17 @@
 /* index.css or App.css */
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Tiro+Bangla:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Tiro+Bangla:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap");
 @theme {
-  --font-man: "Manufacturing Consent",
-    "system-ui";
-    --font-siliguri: "Hind Siliguri",
-      "sans-serif"
+  --font-man: "Manufacturing Consent", "system-ui";
+  --font-siliguri: "Hind Siliguri", "sans-serif";
 }
 @import "tailwindcss";
 @plugin "daisyui";
 
- /* Animated border CSS */
+/* Animated border CSS */
 @property --border-angle {
-  syntax: '<angle>';
+  syntax: "<angle>";
   inherits: false;
   initial-value: 0deg;
 }
@@ -27,16 +25,37 @@
 .animate-border {
   --border-angle: 0deg;
   border: 1px solid transparent;
-  background:
-    conic-gradient(from var(--border-angle), #0000007a 80%, #6366f1 86%, #a5b4fc 90%, #6366f1 94%, #0000007a) border-box;
+  background: conic-gradient(
+      from var(--border-angle),
+      #ffffff7a 80%,
+      #6366f1 86%,
+      #a5b4fc 90%,
+      #6366f1 94%,
+      #0000007a
+    )
+    border-box;
   animation: border-rotate 4s linear infinite;
   border-radius: 1.5rem;
 }
 
-.perspective { perspective: 1200px; }
-.preserve-3d { transform-style: preserve-3d; }
-.backface-hidden { backface-visibility: hidden; }
-.rotate-y-0 { transform: rotateY(0deg); }
-.rotate-y-180 { transform: rotateY(180deg); }
-.rotate-y--180 { transform: rotateY(-180deg); }
-.clip-hex { clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%); }
+.perspective {
+  perspective: 1200px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+.rotate-y--180 {
+  transform: rotateY(-180deg);
+}
+.clip-hex {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+}
