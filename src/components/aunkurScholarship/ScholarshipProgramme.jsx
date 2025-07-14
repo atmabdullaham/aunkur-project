@@ -1,72 +1,114 @@
 import React from "react";
 
-const scholarshipData = [
-  {
-    title: "Student of The Year",
-    badge: "1",
-    badgeColor: "bg-pink-300",
-    description:
-      "Who Score Top on the Exam will be the Aunkur Student of the Year",
-    img: "https://via.placeholder.com/150", // replace with your image
-  },
-  {
-    title: "Talentful",
-    badge: "2",
-    badgeColor: "bg-green-300",
-    description:
-      "Given to students who showcase exceptional talents in specific field.",
-    img: "https://via.placeholder.com/150",
-  },
-  {
-    title: "A Grade",
-    badge: "3",
-    badgeColor: "bg-purple-300",
-    description: "Awarded to students who achieve high scores on the test.",
-    img: "https://via.placeholder.com/150",
-  },
-  {
-    title: "B Grade",
-    badge: "4",
-    badgeColor: "bg-cyan-300",
-    description: "Given to students who perform well on the test.",
-    img: "https://via.placeholder.com/150",
-  },
-];
+const ScholarshipProgramme = () => {
+  const scholarshipData = [
+    {
+      title: "A Grade: ",
+      button: "See details",
+      features: [
+        "Up to 50 patient records",
+        "Scheduling and appointment",
+        "Analytics & Reporting",
+        "Limited reporting and analytics",
+        "Email support",
+      ],
+      badge: "3",
+    },
+    {
+      title: "Student of The Year",
+      button: "See details",
+      features: [
+        "Up to 5,000 patient records",
+        "Comprehensive analytics",
+        "Data portal for self-service scheduling",
+        "Integration with third-party tools",
+        "Phone and email support",
+      ],
+      badge: "1",
+      highlight: true,
+    },
+    {
+      title: "Talentpul",
+      button: "See details",
+      features: [
+        "Unlimited patient records",
+        "Fully customizable workflows and reports",
+        "Dedicated account manager for setup and support",
+        "On-site training and implementation assistance",
+        "24/7 premium support",
+      ],
+      badge: "2",
+      highlight: true,
+    },
+    {
+      title: "B Grade: ",
+      button: "See details",
+      features: [
+        "Custom integrations",
+        "Volume-based pricing",
+        "Advanced analytics suite",
+        "Security compliance support",
+        "24/7 enterprise support",
+      ],
+      badge: "4",
+    },
+  ];
 
-const ScholarshipSection = () => {
   return (
-    <div className="py-12 px-4 md:px-8 bg-white">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-semibold">
-          <span className="text-green-600">Scholarship</span> Programme
-        </h2>
-        <p className="text-gray-500 mt-2 text-sm">
-          শুদ্ধতার স্পর্শে গড়ে উঠুক স্বপ্ন বিকশিত হোক সত্যের ছোঁয়ায়...
-        </p>
+    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        {/* Section Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+            Scholarship <span className="text-green-300">Programme</span>
+          </h2>
+          <p className="mt-3 text-gray-600">
+            শুভ্রতার স্পর্শে লালিত স্বপ্ন বিকশিত হোক সত্যের ছোঁয়ায়….
+          </p>
+        </div>
+
+        {/* Pricing Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {scholarshipData.map((plan, index) => {
+            const isMiddle = index === 1 || index === 2;
+
+            return (
+              <div
+                key={index}
+                className={`flex flex-col justify-between bg-green-100 rounded-2xl shadow-md p-6 transition-all duration-300 w-full
+                  ${isMiddle ? "lg:scale-105" : ""}
+                `}
+              >
+                <div>
+                  <span className="text-xs bg-green-500 text-white px-2 py-1 rounded-full mb-3 inline-block">
+                    {plan.badge}
+                  </span>
+                  <h3 className="text-xl font-semibold mb-1">{plan.title}</h3>
+                  <p className="text-3xl font-bold mb-3">
+                    {plan.price}
+                    <span className="text-base font-medium">
+                      {plan.duration}
+                    </span>
+                  </p>
+                  <ul className="text-gray-600 space-y-2">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="text-green-600 mr-2 mt-1">✔</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button className="mt-6 font-bold text-[#0AA76B] bg-white bg-opacity-50 backdrop-blur-xl shadow-inner py-2 px-4 rounded-lg hover:bg-green-100 transition">
+                  {plan.button}
+                </button>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {scholarshipData.map((item, index) => (
-          <div
-            key={index}
-            className="p-4 rounded-lg border border-gray-200 shadow bg-white flex flex-col items-center text-center hover:shadow-md transition"
-          >
-            <div
-              className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold mb-4 ${item.badgeColor}`}
-            >
-              {item.badge}
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-            <img
-              src={item.img}
-              alt={item.title}
-              className="w-full h-32 object-cover rounded mb-4"
-            />
-            <p className="text-sm text-gray-600">{item.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 
-export default ScholarshipSection;
+export default ScholarshipProgramme;
