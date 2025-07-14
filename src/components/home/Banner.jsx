@@ -17,7 +17,7 @@ const Banner = () => {
       <div className="flex flex-col md:h-[calc(100vh-200px)] md:flex-row items-center justify-between gap-8 px-4 py-4 md:py-8  lg:w-10/12 mx-auto">
         {/* text div */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl text-green-700 font-bold mb-4 text-center">
+          <h1 className="font-siliguri text-2xl md:text-3xl lg:text-4xl text-green-700 font-bold mb-4 text-center">
             শুভ্রতার স্পর্শে লালিত স্বপ্ন বিকশিত হোক সত্যের ছোঁয়ায়
           </h1>
           <p className="text-gray-600 md:text-center text-justify">

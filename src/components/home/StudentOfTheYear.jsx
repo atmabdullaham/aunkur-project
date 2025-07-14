@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import profile1 from "../../assets/reviewer1.jpg";
+import profile1 from "../../assets/reviewer2.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -105,6 +105,76 @@ const StudentOfTheYear = () => {
               bgColor={"bg-[#FFF0F0]"}
               btnColor={"bg-[#FF5E5E]"}
               quoteColor={"text-[#FF5E5E]"}
+            ></StudentOfTheYearCard>
+          </SwiperSlide>
+          {/* 6th */}
+          <SwiperSlide>
+            <StudentOfTheYearCard
+              year={2019}
+              studentName={"Abdullah"}
+              profile={profile1}
+              school={"Bangladesh School Limited"}
+              className={8}
+              rollNumber={10}
+              bgColor={"bg-[#F0F9FF]"}
+              btnColor={"bg-[#3BA9FF]"}
+              quoteColor={"text-[#3BA9FF]"}
+            ></StudentOfTheYearCard>
+          </SwiperSlide>
+          {/* 7th */}
+          <SwiperSlide>
+            <StudentOfTheYearCard
+              year={2019}
+              studentName={"Abdullah"}
+              profile={profile1}
+              school={"Bangladesh School Limited"}
+              className={8}
+              rollNumber={10}
+              bgColor={"bg-[#FFF3F6]"}
+              btnColor={"bg-[#FF4081]"}
+              quoteColor={"text-[#FF4081]"}
+            ></StudentOfTheYearCard>
+          </SwiperSlide>
+          {/* 8th */}
+          <SwiperSlide>
+            <StudentOfTheYearCard
+              year={2019}
+              studentName={"Abdullah"}
+              profile={profile1}
+              school={"Bangladesh School Limited"}
+              className={8}
+              rollNumber={10}
+              bgColor={"bg-[#F9F9EC]"}
+              btnColor={"bg-[#D1C800]"}
+              quoteColor={"text-[#D1C800]"}
+            ></StudentOfTheYearCard>
+          </SwiperSlide>
+          {/* 9th */}
+          <SwiperSlide>
+            <StudentOfTheYearCard
+              year={2019}
+              studentName={"Abdullah"}
+              profile={profile1}
+              school={"Bangladesh School Limited"}
+              className={8}
+              rollNumber={10}
+              bgColor={"bg-[#F0FFF4]"}
+              btnColor={"bg-[#00C178]"}
+              quoteColor={"text-[#00C178]"}
+            ></StudentOfTheYearCard>
+          </SwiperSlide>
+          {/* 10th */}
+          <SwiperSlide>
+            <StudentOfTheYearCard
+              year={2019}
+              studentName={"Abdullah"}
+              profile={profile1}
+              school={"Bangladesh School Limited"}
+              className={8}
+              rollNumber={10}
+              bgColor={"bg-[#F4F4FF]"}
+              btnColor={"bg-[#5960FF]"}
+              quoteColor={"text-[#5960FF]"}
             ></StudentOfTheYearCard>
           </SwiperSlide>
         </Swiper>

@@ -6,6 +6,7 @@ import SuccessStatistics from "../components/home/SuccessStatistics";
 import WhyScholarshipProject from "../components/home/WhyScholarshipProject";
 import EnrollmentTimer from "../components/home/EnrollmentTimer";
 import StudentOfTheYear from "../components/home/StudentOfTheYear";
+import ChairmanMessage from "../components/home/ChairmanMessage";
 
 const Home = () => {
   return (
@@ -23,6 +24,8 @@ const Home = () => {
       <SuccessStatistics></SuccessStatistics>
       {/* Aunkur Student of the Year */}
       <StudentOfTheYear></StudentOfTheYear>
+      {/* Chairman's Message */}
+      <ChairmanMessage></ChairmanMessage>
     </div>
   );
 };

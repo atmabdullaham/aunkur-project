@@ -5,7 +5,7 @@ import TopNavBar from "../components/shared/TopNavBar";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="font-siliguri">
       {/* Top Navbar */}
       <TopNavBar></TopNavBar>
       {/* Navbar */}

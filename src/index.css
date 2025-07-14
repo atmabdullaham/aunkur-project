@@ -1,10 +1,16 @@
+/* index.css or App.css */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Tiro+Bangla:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap');
+@theme {
+  --font-man: "Manufacturing Consent",
+    "system-ui";
+    --font-siliguri: "Hind Siliguri",
+      "sans-serif"
+}
 @import "tailwindcss";
 @plugin "daisyui";
-@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Tiro+Bangla:ital@0;1&display=swap');
-@theme {
-    --font-tirobangla: "Tiro Bangla","serif"; 
-    --font-anekbangla: "Anek Bangla","sans-serif"; 
- }
+
  /* Animated border CSS */
 @property --border-angle {
   syntax: '<angle>';

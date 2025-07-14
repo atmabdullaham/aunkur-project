@@ -43,7 +43,7 @@ const EnrollmentTimer = () => {
         {/* Countdown and Info */}
         <div className="flex flex-col items-center md:items-start gap-6">
           {/* Countdown */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-2">
+          <div className="grid grid-cols-4 gap-8 mb-2">
             <div className="flex flex-col items-center">
               <span className="bg-green-100 bg-opacity-30 backdrop-blur-xl text-black font-bold text-3xl md:text-4xl px-6 py-2 rounded-lg shadow-inner">
                 {String(timeLeft.days).padStart(2, "0")}
@@ -78,7 +78,7 @@ const EnrollmentTimer = () => {
           </div>
           {/* Main Heading */}
           <div className="text-center md:text-left">
-            <h2 className="text-xl md:text-2xl font-bold text-black leading-snug mb-2">
+            <h2 className="text-2xl md:text-2xl font-bold text-black leading-snug mb-2">
               সেরাদের সেরা হয়ে, নিজেকে
               <span className="text-blue-500"> প্রমাণ করার চ্যালেঞ্জ</span> নিতে
               চাইলে আজই এনরুল করে ফেলো
