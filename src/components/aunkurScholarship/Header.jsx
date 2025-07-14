@@ -3,7 +3,7 @@ import img from "../../assets/header_icon.png";
 
 const Header = () => {
   return (
-    <div className="relative overflow-hidden rounded-lg bg-white">
+    <div className="relative overflow-hidden bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Left Section */}
@@ -21,10 +21,24 @@ const Header = () => {
               সম্ভাবনাকে উন্মোচন করা।
             </p>
             <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 ">
-              <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-2 rounded-md font-semibold shadow transition">
+              <button className="bg-emerald-500  hover:bg-emerald-600 text-white px-8 py-2.5 rounded-md font-semibold shadow transition">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 inline-block mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 4v16m8-8H4"
+                  />
+                </svg>
                 Enroll Now
               </button>
-              <button className="flex items-center px-4 py-2 rounded-md border border-emerald-300 bg-white hover:bg-emerald-50 text-emerald-600 font-semibold transition">
+              <button className="flex items-center px-4 py-1 rounded-md border border-emerald-300 bg-white hover:bg-emerald-50 text-emerald-600 font-semibold transition shadow-sm">
                 <span className="bg-emerald-100 p-2 rounded-full mr-2 flex items-center justify-center shadow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

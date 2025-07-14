@@ -26,7 +26,7 @@ const Timer = () => {
 
   return (
     <section className="bg-green-100 px-4 py-12 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto rounded-2xl p-6 sm:p-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Heading */}
         <h2 className="flex items-center justify-center gap-3 text-xl sm:text-2xl md:text-3xl font-bold text-[#0AA76B] bg-white bg-opacity-50 backdrop-blur-xl rounded-xl shadow-inner p-4 mb-8 text-center">
           <GiTrophyCup className="text-2xl sm:text-3xl" />
