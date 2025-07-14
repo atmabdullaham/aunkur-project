@@ -7,17 +7,20 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Left Section */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 items-center justify-center text-center md:text-left">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
               <span className="text-gray-900 font-bangla">অঙ্কুর</span>{" "}
               <span className="text-emerald-500">বৃত্তি প্রকল্প - ২০২৪</span>
             </h1>
             <p className="text-gray-700 text-base sm:text-lg mb-8 max-w-xl">
               ১৯৮৫ সাল থেকে চলমান চট্টগ্রামের সর্ববৃহৎ ৯ মাসব্যাপী জাতীয়তা
-              বৃত্তি প্রকল্প, ১৯৮৫ সাল থেকে চলমান চট্টগ্রামের সর্ববৃহৎ ৯
-              মাসব্যাপী জাতীয়তা বৃত্তি প্রকল্প
+              বৃত্তি প্রকল্প যা প্রতিবছর ১,০০০+ শিক্ষার্থীকে বৃত্তি প্রদান করে।
+              এই প্রকল্পের মাধ্যমে আমরা শিক্ষার্থীদের শিক্ষার মান উন্নয়ন,
+              আত্মবিশ্বাস বৃদ্ধি এবং ভবিষ্যৎ গঠনে সহায়তা করি। আমাদের লক্ষ্য হলো
+              প্রতিটি শিক্ষার্থীকে তাদের স্বপ্ন পূরণের পথে সহায়তা করা এবং তাদের
+              সম্ভাবনাকে উন্মোচন করা।
             </p>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 ">
               <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-2 rounded-md font-semibold shadow transition">
                 Enroll Now
               </button>
@@ -48,11 +51,11 @@ const Header = () => {
 
           {/* Right Section */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <div className="max-w-[400px] w-full aspect-[4/3] flex items-center justify-center">
+            <div className="max-w-full aspect-[4/3] flex items-center justify-center">
               <img
                 src={img}
                 alt="Aunkur Scholarship"
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain rounded-lg shadow-lg"
               />
             </div>
           </div>
