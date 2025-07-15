@@ -13,6 +13,7 @@ import Calender from "../pages/Calender";
 import Library from "../pages/Library";
 import Quiz from "../pages/Quiz";
 import Result from "../pages/Result";
+import PrivateRoute from "./PrivateRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -28,7 +29,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/registration",
-        element: <Registration />,
+        element: (
+          <PrivateRoute>
+            <Registration />,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

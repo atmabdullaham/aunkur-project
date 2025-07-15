@@ -11,14 +11,16 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
+  const navigate = useNavigate();
   const location = useLocation();
-  const from = location?.state || "/";
+  const from = location.state?.from.pathname || "/";
+  console.log(from);
 
   useEffect(() => {
     document.title = "Login | Fluentro";
   }, []);
   const { signInWithGoogle, loginUser } = useContext(AuthContext);
-  const navigate = useNavigate();
+
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then(async (result) => {

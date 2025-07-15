@@ -12,10 +12,12 @@ import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
 
 const ChairmanMessage = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between gap-6 px-4 py-8">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-6 px-4 py-8 w-10/12 mx-auto">
       {/* Swiper container */}
       <div className="w-full md:w-1/2">
-        <h4 className="text-xl font-bold mb-4">Chairman's Message</h4>
+        <h4 className="text-4xl font-bold mb-4 text-center">
+          Chairman's Message
+        </h4>
         <Swiper
           direction={"vertical"} // Enable vertical scrolling
           slidesPerView={"auto"} // Adjust slides dynamically
