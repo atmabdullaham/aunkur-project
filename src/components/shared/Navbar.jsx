@@ -206,10 +206,21 @@ const Navbar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-red-500 rounded-box w-52"
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-50 rounded-box w-72"
                 >
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={user?.photoURL}
+                      className="w-15 h-15 rounded-full"
+                      alt=""
+                    />
+                  </div>
                   <li className="mt-2">
-                    <h2>{user?.displayName}</h2>
+                    <h2 className="text-center text-xl">{user?.displayName}</h2>
+                    <Link to="/profile">
+                      <button className="btn bg-green-500">View Profile</button>
+                    </Link>
+
                     <button
                       onClick={handleLogout}
                       className="btn btn-sm border-0 btn-block bg-red-700 text-center text-white"

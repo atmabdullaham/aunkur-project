@@ -14,6 +14,7 @@ import Library from "../pages/Library";
 import Quiz from "../pages/Quiz";
 import Result from "../pages/Result";
 import PrivateRoute from "./PrivateRoute";
+import UserProfile from "../pages/UserProfile";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -74,6 +75,14 @@ export const router = createBrowserRouter([
       {
         path: "/result",
         element: <Result></Result>,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <UserProfile></UserProfile>
+          </PrivateRoute>
+        ),
       },
     ],
   },
