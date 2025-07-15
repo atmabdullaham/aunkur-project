@@ -27,7 +27,7 @@ const EnrollmentTimer = () => {
 
   return (
     <div className="bg-gradient-to-br from-green-50 to-blue-50 py-4 md:py-16 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-5xl mx-auto bg-green-100 bg-opacity-30 backdrop-blur-md rounded-2xl shadow-lg p-6 md:p-10 my-10 gap-8 items-center  ">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-5xl mx-auto bg-green-100 bg-opacity-30 backdrop-blur-md shadow-inner rounded-2xl p-6 md:p-10 my-10 gap-8 items-center  ">
         {/* Video (unchanged) */}
         <div>
           {/* <video
@@ -38,7 +38,11 @@ const EnrollmentTimer = () => {
         playsInline
         className="w-full rounded-xl"
       /> */}
-          <img src={aunkurTimerCardGif} alt="" className="w-full rounded-xl" />
+          <img
+            src={aunkurTimerCardGif}
+            alt=""
+            className="w-full rounded-xl shadow-inner hover:scale-105 transition-transform duration-300 object-cover mx-auto"
+          />
         </div>
         {/* Countdown and Info */}
         <div className="flex flex-col items-center md:items-start gap-6">
