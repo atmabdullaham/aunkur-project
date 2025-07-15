@@ -9,18 +9,19 @@ import Image_7 from "../../assets/activities_7.png";
 
 const OurActivitiesBanner = () => {
   return (
-    <div className="bg-[#fdf1e8] px-4 sm:px-6 lg:px-20 py-12">
-      <div className="mx-auto flex flex-col lg:flex-row justify-between items-center gap-12">
+    <div className="bg-[#fdf1e8] px-4 py-12 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col lg:flex-row justify-between items-center gap-12">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black leading-snug">
             শুভ্রতার স্পর্শে লালিত স্বপ্ন বিকশিত হোক সত্যের ছোঁয়ায়।
           </h1>
-          <p className="text-base sm:text-lg text-gray-800 leading-relaxed">
+          <p className="text-base sm:text-lg text-justify text-gray-800 leading-relaxed">
             অংকুর শিশু-কিশোর সাহিত্য সাংস্কৃতিক সংসদ, চট্টগ্রাম মহানগর দক্ষিণ-এর
             ওয়েবসাইটে আপনাকে স্বাগতম। আমাদের উদ্দেশ্য হলো শিশু-কিশোরদের সাহিত্য
             ও সংস্কৃতির প্রতি আগ্রহ সৃষ্টি করা এবং তাদের সৃজনশীলতা বিকাশে
-            সহায়তা করা।
+            সহায়তা করা। আমাদের কার্যক্রমের মধ্যে রয়েছে সাহিত্য প্রতিযোগিতা,
+            সাংস্কৃতিক অনুষ্ঠান, কর্মশালা এবং বিভিন্ন সৃজনশীল কার্যক্রম।
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
             <button className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-6 rounded-full shadow-md transition">
@@ -32,7 +33,7 @@ const OurActivitiesBanner = () => {
           </div>
         </div>
         {/* Right Section */}
-        <div className="grid grid-cols-2 gap-4 max-w-md sm:max-w-lg w-full">
+        <div className="grid grid-cols-2 gap-4 max-w-sm sm:max-w-md w-full">
           {/* Top Row */}
           <div className="col-span-2 flex justify-center gap-4">
             <img
