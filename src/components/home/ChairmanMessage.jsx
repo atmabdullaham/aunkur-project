@@ -8,7 +8,7 @@ const ChairmanMessage = () => {
         <h1 className="text-2xl lg:text-5xl font-semibold text-gray-800 mb-4 text-center">
           চেয়ারম্যানের বাণী
         </h1>
-        <div className="bg-white shadow-md rounded-lg p-6 lg:p-6 flex flex-col lg:flex-row items-center lg:items-start">
+        <div className="bg-white flex flex-col lg:flex-row items-center lg:items-start">
           {/* Left side text */}
           <div className="lg:w-4/5">
             <p className="text-lg text-gray-700 text-justify leading-relaxed mb-4">

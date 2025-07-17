@@ -14,7 +14,7 @@ const activities = [
     title: "বৃক্ষরোপণ অভিযান",
     description:
       "স্কুল ক্যাম্পাসে বৃক্ষরোপণ অভিযান ও স্কুল ছাত্রদের মাঝে গাছের চারা বিতরণ",
-    bgColor: "bg-cyan-100",
+    bgColor: "bg-white",
     iconColor: "text-cyan-500",
     svgPath:
       "M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM17 9H7V7H17V9ZM17 13H7V11H17V13ZM14 17H7V15H14V17Z",
@@ -23,7 +23,7 @@ const activities = [
     title: "উন্নত মূল্যবোধ ও চারিত্রিক নির্মলতা সৃষ্টি",
     description:
       "স্কুল ছাত্রদের মাঝে উন্নত মূল্যবোধ ও চারিত্রিক নির্মলতা সৃষ্টির প্রয়াস",
-    bgColor: "bg-pink-100",
+    bgColor: "bg-white",
     iconColor: "text-pink-500",
     svgPath:
       "M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17L4 12L5.41 10.59L9 14.17L18.59 4.58L20 6L9 17Z",
@@ -32,7 +32,7 @@ const activities = [
     title: "কাউন্সেলিং ব্যবস্থা",
     description:
       "মেধা ও মননের সুষ্ঠ বিকাশে কাউন্সেলিং ও বাহ্যিক জ্ঞানার্জনের ব্যবস্থা",
-    bgColor: "bg-purple-100",
+    bgColor: "bg-green-100",
     iconColor: "text-purple-500",
     svgPath:
       "M5 13.18V4H19V13.18C19 13.18 19 13.18 19 13.18L12 20L5 13.18ZM12 7.5L10.5 9H13.5L12 7.5ZM12 15.5L13.5 14H10.5L12 15.5Z",
@@ -41,11 +41,11 @@ const activities = [
 
 const OurActivities = () => {
   return (
-    <section className="bg-gradient-to-br from-green-50 to-blue-50 px-4 py-12 sm:px-6 lg:px-8">
+    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 mb-2">
             আমাদের কার্যক্রম
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
