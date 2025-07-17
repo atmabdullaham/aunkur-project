@@ -55,7 +55,7 @@ const ScholarshipProgramme = () => {
   ];
 
   return (
-    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
+    <section className="bg-white px-4 py-10 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Section Heading */}
         <div className="text-center mb-12">

@@ -107,9 +107,11 @@ const ViewIcon = () => (
 
 const AunkurSyllabus = () => {
   return (
-    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
+    <section className="bg-white px-4 py-10 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <h1 className="text-center font-bold text-3xl mb-2">সিলেবাস</h1>
+        <h1 className="text-center font-bold text-2xl sm:text-3xl md:text-4xl mb-2">
+          সিলেবাস
+        </h1>
         <p className="text-center text-gray-600 mb-8 text-base">
           নিচের দেওয়া সিলেবাস গুলো থেকে তোমার শ্রেণির সিলেবাস ডাউনলোড করে এখনি
           প্রস্তুতি শুরু করে দাও।

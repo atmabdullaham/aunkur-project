@@ -25,48 +25,39 @@ const Timer = () => {
   const endTimeDiff = timeDiff(enrollmentEnd);
 
   return (
-    <section className="bg-green-100 px-4 py-12 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <section className="bg-green-50 px-4 py-10 sm:px-6 md:py-16 lg:px-8">
+      <div className="max-w-5xl mx-auto text-center space-y-6">
         {/* Heading */}
-        <h2 className="flex items-center justify-center gap-3 text-xl sm:text-2xl md:text-3xl font-bold text-[#0AA76B] bg-white bg-opacity-50 backdrop-blur-xl rounded-xl shadow-inner p-4 mb-8 text-center">
-          <GiTrophyCup className="text-2xl sm:text-3xl" />
-          Become an Aunkur Scholarship Holder!
+        <h2 className="flex justify-center items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-700 bg-white bg-opacity-60 backdrop-blur-md p-4 rounded-xl shadow-inner">
+          <GiTrophyCup className="text-xl hidden lg:block sm:text-2xl" />
+          এখনই অঙ্কুর স্কলারশিপে অংশগ্রহণ করুন!
         </h2>
 
         {/* Countdown */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
-          {/* Start Info */}
-          <div className="text-center md:flex-1">
-            <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-1">
-              Enrollment Starts
-            </h3>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-medium">
-              July 10, 2025
-            </p>
-          </div>
-
+        <div className="flex flex-col items-center gap-5 md:gap-10 md:flex-row md:justify-center">
           {/* Countdown Box */}
-          <div className="text-center md:flex-1">
-            <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-1">
-              Enrollment Ends
+          <div className="text-center">
+            <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-1">
+              রেজিস্ট্রেশন শেষ হচ্ছে
             </h3>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-medium mb-4">
-              September 30, 2025
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-medium mb-3">
+              ৩০ সেপ্টেম্বর ২০২৫
             </p>
-            <div className="flex justify-center flex-wrap gap-3">
+            <div className="flex justify-center gap-2 sm:gap-4 flex-wrap sm:flex-nowrap">
               {[
-                { label: "d", value: endTimeDiff.days },
-                { label: "h", value: endTimeDiff.hours },
-                { label: "m", value: endTimeDiff.minutes },
-                { label: "s", value: endTimeDiff.seconds },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="px-4 py-2 sm:px-5 sm:py-3 bg-white bg-opacity-50 backdrop-blur-xl rounded-xl shadow-inner text-2xl sm:text-3xl font-bold text-green-800"
-                >
-                  {item.value}
-                  <span className="ml-1 text-sm text-gray-600 font-medium">
-                    {item.label}
+                { label: "দিন", value: endTimeDiff.days },
+                { label: "ঘণ্টা", value: endTimeDiff.hours },
+                { label: "মিনিট", value: endTimeDiff.minutes },
+                { label: "সেকেন্ড", value: endTimeDiff.seconds },
+              ].map(({ label, value }) => (
+                <div key={label} className="flex flex-col items-center">
+                  <span className="bg-green-100 bg-opacity-30 backdrop-blur-xl text-black font-bold text-xl sm:text-2xl md:text-4xl px-4 sm:px-5 py-2 rounded-lg shadow-inner">
+                    {String(value)
+                      .padStart(2, "0")
+                      .replace(/\d/g, (d) => "০১২৩৪৫৬৭৮৯"[d])}
+                  </span>
+                  <span className="text-xs sm:text-sm text-gray-500 mt-1">
+                    {label}
                   </span>
                 </div>
               ))}
@@ -74,24 +65,22 @@ const Timer = () => {
           </div>
         </div>
 
-        {/* Notice */}
-        <div className="mt-8">
-          <p className="text-center flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base text-gray-700">
-            <PiWarningCircleBold className="text-base sm:text-lg md:text-xl text-red-500" />
-            রেজিস্ট্রেশন শেষের সময়: সেপ্টেম্বর ৩০, ২০২৫ রাত ১১:৫৯। এরপর কোনও
-            রেজিস্ট্রেশন গ্রহণ করা হবে না।
-          </p>
+        {/* Warning */}
+        <div className="mt-6 text-gray-700 text-sm sm:text-base flex items-center justify-center gap-2">
+          <PiWarningCircleBold className="text-red-500 text-lg hidden lg:block sm:text-xl" />
+          রেজিস্ট্রেশন শেষ সময়: ৩০ সেপ্টেম্বর ২০২৫, রাত ১১:৫৯। এর পরে কোনো আবেদন
+          গ্রহণ করা হবে না।
         </div>
 
         {/* Fee Info */}
-        <p className="text-center text-green-600 mt-4 text-sm sm:text-base md:text-lg font-semibold">
+        <p className="text-green-700 font-semibold text-sm sm:text-base md:text-lg">
           রেজিস্ট্রেশন ফি: ২০০ টাকা
         </p>
 
         {/* Button */}
-        <div className="text-center mt-6">
-          <button className="bg-gradient-to-r from-green-400 to-green-600 hover:scale-105 transition-transform duration-300 text-white px-6 py-3 rounded-xl text-sm sm:text-base md:text-lg font-semibold shadow-md">
-            Enroll Now
+        <div className="mt-4">
+          <button className="bg-gradient-to-r from-green-500 to-green-700 hover:scale-105 transition-transform duration-300 text-white px-6 py-3 rounded-lg text-sm sm:text-base md:text-lg font-semibold shadow-lg">
+            এখনই রেজিস্ট্রেশন করুন
           </button>
         </div>
       </div>
