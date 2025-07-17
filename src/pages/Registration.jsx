@@ -9,7 +9,6 @@ const Registration = () => {
   const [feeData, setFeeData] = useState(null); // Stores payment data
   const [formSubmitted, setFormSubmitted] = useState(false); // Controls form visibility
   const [paymentSuccess, setPaymentSuccess] = useState(false); // Controls payment visibility
-
   console.log(feeData);
 
   // Handler when payment is successful
@@ -36,7 +35,7 @@ const Registration = () => {
           console.log("Data saved successfully:", res.data);
         });
       // Optionally show success message or redirect
-      alert("Registration and payment successful!");
+      document.getElementById("my_modal_5").showModal();
     } catch (error) {
       console.error("Failed to save data:", error);
       alert("Something went wrong. Please try again.");
@@ -51,10 +50,6 @@ const Registration = () => {
         isPaymentDone={paymentSuccess}
       />
 
-      <p className="text-center bg-[#E5FFF5] rounded-[6px] max-w-4xl p-1 mb-3 mt-3 mx-auto">
-        ফরম পূরণ করে তোমার সিট বুকিং করে নাও।
-      </p>
-
       <div className="flex flex-col items-center justify-center">
         {/* Show Payment component after form submission */}
         {!paymentSuccess && (
@@ -66,6 +61,27 @@ const Registration = () => {
           <RegistrationForm onSubmit={handleFormSubmit} />
         )}
       </div>
+      {/* Modal */}
+
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box flex flex-col items-center">
+          <h3 className="font-bold text-lg">অভিনন্দন!</h3>
+          <p className="py-4">আপনার নিবন্ধন সফলভাবে সম্পন্ন হয়েছে।</p>
+          <p className="py-4">
+            আপনার প্রদত্ত তথ্য আমাদের সিস্টেমে গ্রহণ করা হয়েছে এবং যাচাই
+            প্রক্রিয়া চলমান রয়েছে। আপনি ২৪ ঘণ্টার মধ্যে একটি নিশ্চিতকরণ বার্তা
+            পাবেন।
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn bg-green-500 text-white rounded-full">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };

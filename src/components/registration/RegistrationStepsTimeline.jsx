@@ -26,12 +26,12 @@ const RegistrationStepsTimeline = ({ isFormSubmitted, isPaymentDone }) => {
                 {/* horizontal line */}
                 <hr
                   className={`w-7 h-1 md:w-16 md:h-1 ${
-                    isFormSubmitted ? "bg-green-500" : "bg-gray-300"
+                    isPaymentDone ? "bg-green-500" : "bg-gray-300"
                   }`}
                 />
               </div>
               <p className="text-center  text-gray-800 font-medium">
-                ফর্ম ফিলাপ করুন
+                ফি প্রদানের তথ্য দিন
               </p>
             </li>
 
@@ -40,19 +40,19 @@ const RegistrationStepsTimeline = ({ isFormSubmitted, isPaymentDone }) => {
               <div className="flex items-center">
                 <hr
                   className={`w-7 h-1 md:w-16 md:h-1 ${
-                    isFormSubmitted ? "bg-green-500" : "bg-gray-300"
+                    isPaymentDone ? "bg-green-500" : "bg-gray-300"
                   }`}
                 />
                 <div
                   className={`w-10 h-10 flex items-center justify-center rounded-full ${
-                    isFormSubmitted ? "bg-green-500 text-white" : "bg-gray-300"
+                    isPaymentDone ? "bg-green-500 text-white" : "bg-gray-300"
                   }`}
                 >
                   2
                 </div>
                 <hr
                   className={`w-7 h-1 md:w-16 md:h-1 ${
-                    isPaymentDone ? "bg-green-500" : "bg-gray-300"
+                    isFormSubmitted ? "bg-green-500" : "bg-gray-300"
                   }`}
                 />
               </div>
@@ -66,19 +66,19 @@ const RegistrationStepsTimeline = ({ isFormSubmitted, isPaymentDone }) => {
               <div className="flex items-center">
                 <hr
                   className={`w-7 h-1 md:w-16 md:h-1 ${
-                    isPaymentDone ? "bg-green-500" : "bg-gray-300"
+                    isFormSubmitted ? "bg-green-500" : "bg-gray-300"
                   }`}
                 />
                 <div
                   className={`w-10 mr-6 md:mr-12 h-10 flex items-center justify-center rounded-full ${
-                    isPaymentDone ? "bg-green-500 text-white" : "bg-gray-300"
+                    isFormSubmitted ? "bg-green-500 text-white" : "bg-gray-300"
                   }`}
                 >
                   3
                 </div>
               </div>
               <p className="text-center text-gray-800 font-medium">
-                ফি প্রদানের তথ্য দিন
+                ফর্ম ফিলাপ করুন
               </p>
             </li>
           </ul>
@@ -95,7 +95,8 @@ const RegistrationStepsTimeline = ({ isFormSubmitted, isPaymentDone }) => {
           <li className="flex items-start">
             <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
             <span>
-              0183834377 নাম্বারে সেন্ডমানি করে ট্রানজেকশন আইডিটি কপি করে রাখুন
+              0183834377 (বিকাশ) নাম্বারে সেন্ডমানি করে ট্রানজেকশন আইডিটি কপি
+              করে রাখুন
             </span>
           </li>
           <li className="flex items-start">

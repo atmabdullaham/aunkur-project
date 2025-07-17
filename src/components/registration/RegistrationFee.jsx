@@ -102,7 +102,7 @@ const RegistrationFee = ({ onSuccess }) => {
             }
           `}
           type="submit"
-          value="সাবমিট"
+          value="Next"
         />
       </div>
     </form>
