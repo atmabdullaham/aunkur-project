@@ -61,7 +61,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/news-blogs"
+          to="/notice-blogs"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
@@ -70,7 +70,7 @@ const Navbar = () => {
               : "hover:text-[#000000]"
           }
         >
-          নিউজ ও ব্লগ
+          নোটিশ ও ব্লগ
         </NavLink>
       </li>
       <li>

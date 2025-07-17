@@ -8,7 +8,7 @@ import AunkurScholarship from "../pages/AunkurScholarship";
 import Error from "../components/Error";
 import Success from "../components/Success";
 import Activities from "../pages/Activities";
-import NewsAndBlog from "../pages/NewsAndBlog";
+import NoticeAndBlog from "../pages/NoticeAndBlog";
 import Calender from "../pages/Calender";
 import Library from "../pages/Library";
 import Quiz from "../pages/Quiz";
@@ -57,8 +57,8 @@ export const router = createBrowserRouter([
         element: <Activities></Activities>,
       },
       {
-        path: "/news-blogs",
-        element: <NewsAndBlog></NewsAndBlog>,
+        path: "/notice-blogs",
+        element: <NoticeAndBlog></NoticeAndBlog>,
       },
       {
         path: "/calender",

@@ -1,39 +1,46 @@
 import { useState } from "react";
 import RegistrationStepsTimeline from "../components/registration/RegistrationStepsTimeline";
 import RegistrationForm from "../components/registration/RegistrationForm";
-import Payment from "../components/registration/Payment";
+
+import RegistrationFee from "../components/registration/RegistrationFee";
+import axios from "axios";
 
 const Registration = () => {
-  const [formData, setFormData] = useState(null); // Stores form submission data
+  const [feeData, setFeeData] = useState(null); // Stores payment data
   const [formSubmitted, setFormSubmitted] = useState(false); // Controls form visibility
   const [paymentSuccess, setPaymentSuccess] = useState(false); // Controls payment visibility
 
-  // Handler when form is successfully submitted
-  const handleFormSubmit = (data) => {
-    setFormData(data);
-    setFormSubmitted(true);
-  };
+  console.log(feeData);
 
   // Handler when payment is successful
-  const handlePaymentSuccess = async (paymentData) => {
+  const handlePaymentSuccess = (paymentData) => {
+    setFeeData(paymentData);
     setPaymentSuccess(true);
+  };
 
-    // Combine both registration and payment data
+  // Handler when form is successfully submitted
+  const handleFormSubmit = async (data) => {
+    setFormSubmitted(true);
     const finalSubmission = {
-      ...formData,
-      ...paymentData,
+      ...feeData,
+      ...data,
       submittedAt: new Date().toISOString(),
     };
-    console.log(finalSubmission);
+    console.log("Final Submission Data:", finalSubmission);
+    // Combine both registration and payment data
 
-    // try {
-    //   await axios.post("/api/submit", finalSubmission);
-    //   // Optionally show success message or redirect
-    //   alert("Registration and payment successful!");
-    // } catch (error) {
-    //   console.error("Failed to save data:", error);
-    //   alert("Something went wrong. Please try again.");
-    // }
+    try {
+      await axios
+        .post("http://localhost:5000/application", finalSubmission)
+        .then((res) => {
+          console.log("Data saved successfully:", res.data);
+        });
+      // Optionally show success message or redirect
+      alert("Registration and payment successful!");
+    } catch (error) {
+      console.error("Failed to save data:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -49,12 +56,14 @@ const Registration = () => {
       </p>
 
       <div className="flex flex-col items-center justify-center">
-        {/* Show Registration Form initially */}
-        {!formSubmitted && <RegistrationForm onSubmit={handleFormSubmit} />}
-
         {/* Show Payment component after form submission */}
-        {formSubmitted && !paymentSuccess && (
-          <Payment onSuccess={handlePaymentSuccess} />
+        {!paymentSuccess && (
+          // <Payment onSuccess={handlePaymentSuccess} />
+          <RegistrationFee onSuccess={handlePaymentSuccess}></RegistrationFee>
+        )}
+        {/* Show Registration Form initially */}
+        {paymentSuccess && !formSubmitted && (
+          <RegistrationForm onSubmit={handleFormSubmit} />
         )}
       </div>
     </div>

@@ -9,14 +9,13 @@ const RegistrationForm = ({ onSubmit }) => {
   } = useForm();
 
   const submitForm = (data) => {
-    console.log(data);
     onSubmit(data);
   };
 
   return (
     <form
       onSubmit={handleSubmit(submitForm)}
-      className={`border border-green-500 rounded-lg p-8 max-w-4xl mx-auto bg-base-100`}
+      className={`border border-green-500 rounded-lg p-4 md:p-8 max-w-4xl mx-auto bg-base-100`}
     >
       <div className="text-center mb-8 ">
         <h1 className="text-3xl font-bold text-gray-800 mb-2 font-tirobangla">
@@ -28,7 +27,7 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* -------------------------------- */}
       {/* Personal Information div*/}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl rounded-tr-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-3 md:p-6 rounded-l-xl rounded-tr-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Name english */}
         <div>
           <label className="label">Name (English) *</label>
@@ -82,7 +81,7 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* -------------------------------- */}
       {/* Father's and Mothers's div */}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-3 md:p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Father's Name */}
         <div>
           <label className="label">Father's Name *</label>
@@ -139,7 +138,7 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* --------------------------------- */}
       {/* Educational Information */}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-3 md:p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* School Name */}
         <div>
           <label className="label">Name of School *</label>
@@ -207,7 +206,7 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* -------------------------- */}
       {/* Contact Information */}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-3 md:p-6 rounded-l-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Phone */}
         <div>
           <label className="label">Phone Number *</label>
@@ -282,7 +281,7 @@ const RegistrationForm = ({ onSubmit }) => {
       </div>
       {/* ------------------------------------- */}
       {/* email and exam center choice */}
-      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-l-xl rounded-br-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-3 md:p-6 rounded-l-xl rounded-br-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/*Exam Center */}
         <div>
           <label className="label">Exam Center Choice *</label>
@@ -323,7 +322,7 @@ const RegistrationForm = ({ onSubmit }) => {
         <input
           className="btn btn-primary btn-lg px-8 py-3 text-white bg-gradient-to-r from-green-500 to-blue-500 border-none hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
           type="submit"
-          value="সাবমিট"
+          value="Submit Registration"
         />
       </div>
     </form>

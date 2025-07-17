@@ -156,7 +156,7 @@ const Signup = () => {
                 )}
 
                 <input
-                  className="btn text-white bg-red-500 hover:border-red-600 mt-4"
+                  className="btn text-white bg-green-500 hover:border-green-600 mt-4"
                   type="submit"
                   value="Login"
                 />
