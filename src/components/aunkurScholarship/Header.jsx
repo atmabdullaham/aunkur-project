@@ -5,72 +5,81 @@ const Header = () => {
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center gap-0 lg:gap-10">
           {/* Left Section */}
-          <div className="w-full md:w-1/2 items-center justify-center text-center md:text-left">
+          <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
               <span className="text-gray-900 font-bangla">অঙ্কুর</span>{" "}
               <span className="text-emerald-500">বৃত্তি প্রকল্প - ২০২৪</span>
             </h1>
-            <p className="text-gray-700 text-base sm:text-lg mb-8 max-w-xl">
+            <p className="text-gray-700 text-sm sm:text-base lg:text-lg mb-0 lg:mb-8 max-w-xl mx-auto leading-relaxed">
               ১৯৮৫ সাল থেকে চলমান চট্টগ্রামের সর্ববৃহৎ ৯ মাসব্যাপী জাতীয়তা
-              বৃত্তি প্রকল্প যা প্রতিবছর ১,০০০+ শিক্ষার্থীকে বৃত্তি প্রদান করে।
-              এই প্রকল্পের মাধ্যমে আমরা শিক্ষার্থীদের শিক্ষার মান উন্নয়ন,
-              আত্মবিশ্বাস বৃদ্ধি এবং ভবিষ্যৎ গঠনে সহায়তা করি। আমাদের লক্ষ্য হলো
-              প্রতিটি শিক্ষার্থীকে তাদের স্বপ্ন পূরণের পথে সহায়তা করা এবং তাদের
-              সম্ভাবনাকে উন্মোচন করা।
+              ভিত্তিক বৃত্তি প্রকল্প। প্রতিবছর ১,০০০+ শিক্ষার্থী এই প্রকল্পের
+              মাধ্যমে বৃত্তি পেয়ে থাকে। শিক্ষার্থীদের আত্মবিশ্বাস, মূল্যবোধ ও
+              ভবিষ্যৎ গঠনে সহায়তা করাই এই প্রকল্পের মূল লক্ষ্য।
             </p>
-            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 ">
-              <button className="bg-emerald-500  hover:bg-emerald-600 text-white px-8 py-2.5 rounded-md font-semibold shadow transition">
+
+            {/* Button - only on md and up */}
+            <div className="hidden md:flex">
+              <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-md font-semibold shadow transition flex items-center gap-2 text-sm sm:text-base">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 inline-block mr-2"
                   fill="none"
                   viewBox="0 0 24 24"
+                  strokeWidth={1.8}
                   stroke="currentColor"
+                  className="w-5 h-5"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 4v16m8-8H4"
+                    d="M12 14l9-5-9-5-9 5 9 5z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z"
                   />
                 </svg>
-                Enroll Now
-              </button>
-              <button className="flex items-center px-4 py-1 rounded-md border border-emerald-300 bg-white hover:bg-emerald-50 text-emerald-600 font-semibold transition shadow-sm">
-                <span className="bg-emerald-100 p-2 rounded-full mr-2 flex items-center justify-center shadow">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-emerald-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="white"
-                    />
-                    <polygon points="10,8 16,12 10,16" fill="currentColor" />
-                  </svg>
-                </span>
-                Watch Video
+                রেজিস্ট্রেশন করুন
               </button>
             </div>
           </div>
 
           {/* Right Section */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <div className="max-w-full aspect-[4/3] flex items-center justify-center">
+          <div className="w-full md:w-1/2 flex flex-col items-center">
+            <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg aspect-[4/3] flex items-center justify-center">
               <img
                 src={img}
-                alt="Aunkur Scholarship"
+                alt="অঙ্কুর বৃত্তি"
                 className="w-full h-auto object-contain rounded-lg shadow-lg"
               />
+            </div>
+
+            {/* Button - only on small devices */}
+            <div className="block md:hidden mt-6">
+              <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-md font-semibold shadow transition flex items-center gap-2 text-sm sm:text-base">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.8}
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 14l9-5-9-5-9 5 9 5z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z"
+                  />
+                </svg>
+                রেজিস্ট্রেশন করুন
+              </button>
             </div>
           </div>
         </div>

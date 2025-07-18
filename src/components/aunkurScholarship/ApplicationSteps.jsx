@@ -4,58 +4,58 @@ const ApplicationSteps = () => {
   const steps = [
     {
       id: 1,
-      title: "Enroll",
-      description: "enroll now to start your journey.",
+      title: "তালিকাভুক্তি",
+      description: "তোমার যাত্রা শুরু করতে এখনই তালিকাভুক্ত হও।",
       icon: "📝",
     },
     {
       id: 2,
-      title: "Registration",
-      description: "register to secure your spot in the program.",
+      title: "রেজিস্ট্রেশন",
+      description: "প্রোগ্রামে অংশ নিতে রেজিস্ট্রেশন সম্পন্ন করো।",
       icon: "🔐",
     },
     {
       id: 3,
-      title: "Submit Application",
-      description:
-        "Submit your application to be considered for the scholarship.",
+      title: "আবেদন জমা",
+      description: "স্কলারশিপ পেতে এখনই তোমার আবেদন জমা দাও।",
       icon: "📄",
     },
     {
       id: 4,
-      title: "Payment",
-      description: "Complete the payment to finalize your registration.",
+      title: "পেমেন্ট",
+      description: "রেজিস্ট্রেশন চূড়ান্ত করতে পেমেন্ট সম্পন্ন করো।",
       icon: "💰",
     },
     {
       id: 5,
-      title: "Approve",
-      description:
-        "Your application will be reviewed and approved by our team.",
+      title: "অনুমোদন",
+      description: "তোমার আবেদন আমাদের টিম রিভিউ করে অনুমোদন করবে।",
       icon: "✅",
     },
   ];
 
   return (
-    <section className="bg-green-100 px-4 py-12 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-black">
-        <h2 className="text-4xl font-bold text-center mb-5">
-          Application in 5 Steps
+    <section className="bg-green-100 px-4 py-10 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 py-10 text-black">
+        {/* Header */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-5 leading-snug">
+          মাত্র ৫ ধাপে আবেদন প্রক্রিয়া
         </h2>
-        <p className="text-center text-gray-600 mb-12">
-          এই ৪টি ধাপ ফলো করে তুমিও হতে পারো পরবর্তী বিজয়ী, তাই এখনই রেজিস্ট্রেশন
-          করে ফেলো।
+        <p className="text-center text-gray-700 mb-12 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          এই ৫টি ধাপ ফলো করে তুমিও হতে পারো পরবর্তী বিজয়ী। তাই দেরি না করে এখনই
+          রেজিস্ট্রেশন করে ফেলো।
         </p>
+
         {/* Step Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-start gap-8 md:gap-4 lg:gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-10 sm:grid sm:grid-cols-2 lg:flex lg:flex-row justify-center items-start text-center">
           {steps.map((step, index) => (
             <div
               key={step.id}
-              className="relative flex flex-col items-center text-center space-y-4 w-full md:w-1/4"
+              className="relative flex flex-col items-center space-y-4 w-full sm:w-full md:w-72"
             >
-              {/* Curved Arrow between steps */}
+              {/* Arrow only for larger screens */}
               {index !== steps.length - 1 && (
-                <div className="absolute top-[50px] right-[-100px] transform hidden md:block z-10">
+                <div className="absolute top-[50px] right-[-100px] transform hidden lg:block z-10">
                   <svg
                     width="130"
                     height="30"
@@ -104,21 +104,23 @@ const ApplicationSteps = () => {
                 </div>
               )}
 
-              {/* Step Icon Container */}
-              <div className="bg-white backdrop-blur-md border border-amber-500 p-5 rounded-2xl shadow-lg w-[100px] h-[100px] flex items-center justify-center">
-                <div className="text-5xl">{step.icon}</div>
+              {/* Icon */}
+              <div className="bg-white backdrop-blur-md border border-amber-500 p-5 rounded-2xl shadow-lg w-[90px] h-[90px] flex items-center justify-center">
+                <div className="text-4xl">{step.icon}</div>
               </div>
 
               {/* Step Number */}
-              <p className="text-sm font-medium text-gray-500 uppercase tracking-wider mt-4">
-                STEP {step.id}
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mt-2">
+                ধাপ {step.id}
               </p>
 
-              {/* Step Title */}
-              <h3 className="text-xl font-bold">{step.title}</h3>
+              {/* Title */}
+              <h3 className="text-lg font-semibold">{step.title}</h3>
 
-              {/* Step Description */}
-              <p className="text-gray-600 text-sm">{step.description}</p>
+              {/* Description */}
+              <p className="text-gray-600 text-sm leading-snug px-2 sm:px-0">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
