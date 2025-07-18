@@ -25,10 +25,10 @@ const Timer = () => {
   const endTimeDiff = timeDiff(enrollmentEnd);
 
   return (
-    <section className="bg-green-50 px-4 py-10 sm:px-6 md:py-16 lg:px-8">
+    <section className="bg-green-100 px-4 py-10 sm:px-6 md:py-16 lg:px-8">
       <div className="max-w-5xl mx-auto text-center space-y-6">
         {/* Heading */}
-        <h2 className="flex justify-center items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-700 bg-white bg-opacity-60 backdrop-blur-md p-4 rounded-xl shadow-inner">
+        <h2 className="flex justify-center items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-700 bg-green-200 bg-opacity-60 backdrop-blur-md p-4 rounded-xl shadow-inner">
           <GiTrophyCup className="text-xl hidden lg:block sm:text-2xl" />
           এখনই অঙ্কুর স্কলারশিপে অংশগ্রহণ করুন!
         </h2>
@@ -51,7 +51,7 @@ const Timer = () => {
                 { label: "সেকেন্ড", value: endTimeDiff.seconds },
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col items-center">
-                  <span className="bg-green-100 bg-opacity-30 backdrop-blur-xl text-black font-bold text-xl sm:text-2xl md:text-4xl px-4 sm:px-5 py-2 rounded-lg shadow-inner">
+                  <span className="bg-green-200 bg-opacity-30 backdrop-blur-xl text-black font-bold text-xl sm:text-2xl md:text-4xl px-4 sm:px-5 py-2 rounded-lg shadow-inner">
                     {String(value)
                       .padStart(2, "0")
                       .replace(/\d/g, (d) => "০১২৩৪৫৬৭৮৯"[d])}

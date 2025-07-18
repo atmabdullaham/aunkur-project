@@ -100,7 +100,7 @@ const FAQ = () => {
                   type="text"
                   id="name"
                   className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
-                  placeholder="Your Name"
+                  placeholder="তোমার নাম"
                 />
               </div>
               <div>
@@ -114,7 +114,7 @@ const FAQ = () => {
                   type="email"
                   id="email"
                   className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
-                  placeholder="Your Email"
+                  placeholder="তোমার ইমেইল"
                 />
               </div>
               <div>
@@ -128,7 +128,7 @@ const FAQ = () => {
                   id="message"
                   rows="4"
                   className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
-                  placeholder="Your Message"
+                  placeholder="তোমার বার্তা"
                 ></textarea>
               </div>
               <button

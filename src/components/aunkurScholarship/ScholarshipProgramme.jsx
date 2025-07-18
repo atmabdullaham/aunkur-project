@@ -1,105 +1,110 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const ScholarshipProgramme = () => {
   const scholarshipData = [
     {
-      title: "A Grade: ",
-      button: "See details",
-      features: [
-        "Up to 50 patient records",
-        "Scheduling and appointment",
-        "Analytics & Reporting",
-        "Limited reporting and analytics",
-        "Email support",
-      ],
-      badge: "3",
+      title: "এ গ্রেড শিক্ষার্থী",
+      button: "বিস্তারিত দেখুন",
+      description:
+        "যেসব শিক্ষার্থী ধারাবাহিক ভালো ফলাফল অর্জন করেছে, তারা এই গ্রেডের আওতায় স্কলারশিপ পেতে পারে।",
+      badge: "৩",
     },
     {
-      title: "Student of The Year",
-      button: "See details",
-      features: [
-        "Up to 5,000 patient records",
-        "Comprehensive analytics",
-        "Data portal for self-service scheduling",
-        "Integration with third-party tools",
-        "Phone and email support",
-      ],
-      badge: "1",
+      title: "স্টুডেন্ট অব দ্য ইয়ার",
+      button: "বিস্তারিত দেখুন",
+      description:
+        "একজন শিক্ষার্থীর একবছরের সামগ্রিক পারফরম্যান্স, নেতৃত্ব ও সমাজসেবামূলক কাজের ভিত্তিতে এই সম্মাননা প্রদান করা হয়।",
+      badge: "১",
       highlight: true,
     },
     {
-      title: "Talentpul",
-      button: "See details",
-      features: [
-        "Unlimited patient records",
-        "Fully customizable workflows and reports",
-        "Dedicated account manager for setup and support",
-        "On-site training and implementation assistance",
-        "24/7 premium support",
-      ],
-      badge: "2",
+      title: "ট্যালেন্টপুল স্কলার",
+      button: "বিস্তারিত দেখুন",
+      description:
+        "বিশেষ মেধাবী শিক্ষার্থীদের জন্য ট্যালেন্টপুল স্কলারশিপ নির্ধারিত যা তাদের সম্ভাবনাকে বিকশিত করে।",
+      badge: "২",
       highlight: true,
     },
     {
-      title: "B Grade: ",
-      button: "See details",
-      features: [
-        "Custom integrations",
-        "Volume-based pricing",
-        "Advanced analytics suite",
-        "Security compliance support",
-        "24/7 enterprise support",
-      ],
-      badge: "4",
+      title: "বি গ্রেড শিক্ষার্থী",
+      button: "বিস্তারিত দেখুন",
+      description:
+        "যেসব শিক্ষার্থী কিছু বিষয়ে উন্নতি প্রয়োজন, তাদের জন্য এই স্কলারশিপ প্রোগ্রাম সহায়ক ভূমিকা পালন করে।",
+      badge: "৪",
     },
   ];
 
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const small = window.innerWidth < 640;
+      setIsSmallDevice(small);
+      console.log(
+        "isSmallDevice:",
+        small,
+        "window.innerWidth:",
+        window.innerWidth
+      );
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  // On small device, reorder the array based on badge number ascending
+  const displayedData = isSmallDevice
+    ? [...scholarshipData].sort((a, b) => Number(a.badge) - Number(b.badge))
+    : scholarshipData;
+
   return (
     <section className="bg-white px-4 py-10 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="max-w-6xl mx-auto py-10">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
-            Scholarship <span className="text-green-300">Programme</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+            স্কলারশিপ <span className="text-green-500">প্রোগ্রাম</span>
           </h2>
-          <p className="mt-3 text-gray-600">
-            শুভ্রতার স্পর্শে লালিত স্বপ্ন বিকশিত হোক সত্যের ছোঁয়ায়….
+          <p className="mt-3 text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
+            প্রতিভা ও মেধার সঠিক মূল্যায়নের জন্য আমাদের স্কলারশিপ প্রোগ্রাম
+            চালু হয়েছে। এই উদ্যোগ শিক্ষার্থীদের উন্নয়নে সহায়তা করবে এবং
+            ভবিষ্যতের জন্য প্রস্তুত করবে।
           </p>
         </div>
 
-        {/* Pricing Cards Grid */}
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {scholarshipData.map((plan, index) => {
-            const isMiddle = index === 1 || index === 2;
+          {displayedData.map((plan, index) => {
+            // original middle highlight logic from your code
+            const originalIndex = scholarshipData.indexOf(plan);
+            const isMiddle = originalIndex === 1 || originalIndex === 2;
 
             return (
               <div
                 key={index}
-                className={`flex flex-col justify-between bg-green-100 rounded-2xl shadow-md p-6 transition-all duration-300 w-full
-                  ${isMiddle ? "lg:scale-105" : ""}
-                `}
+                className={`relative flex flex-col justify-between bg-green-100 rounded-2xl shadow-md p-6 pt-10 transition-all duration-300 w-full ${
+                  isMiddle ? "lg:scale-105" : ""
+                }`}
               >
-                <div>
-                  <span className="text-xs bg-green-500 text-white px-2 py-1 rounded-full mb-3 inline-block">
+                {/* Badge at top, half outside */}
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
+                  <div className="w-14 h-14 text-black text-center leading-[3.5rem] font-bold rounded-full  bg-white">
                     {plan.badge}
-                  </span>
-                  <h3 className="text-xl font-semibold mb-1">{plan.title}</h3>
-                  <p className="text-3xl font-bold mb-3">
-                    {plan.price}
-                    <span className="text-base font-medium">
-                      {plan.duration}
-                    </span>
-                  </p>
-                  <ul className="text-gray-600 space-y-2">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="text-green-600 mr-2 mt-1">✔</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  </div>
                 </div>
-                <button className="mt-6 font-bold text-[#0AA76B] bg-white bg-opacity-50 backdrop-blur-xl shadow-inner py-2 px-4 rounded-lg hover:bg-green-100 transition">
+                {/* Card Content */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-gray-800 mt-6 text-center">
+                    {plan.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm sm:text-base text-center">
+                    {plan.description}
+                  </p>
+                </div>
+
+                {/* Button */}
+                <button className="mt-6 font-semibold text-[#0AA76B] bg-white bg-opacity-50 backdrop-blur-xl shadow-inner py-2 px-4 rounded-lg hover:bg-green-200 transition text-sm sm:text-base">
                   {plan.button}
                 </button>
               </div>
