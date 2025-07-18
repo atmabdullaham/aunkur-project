@@ -12,7 +12,6 @@ const StudentOfTheYearCard = ({
   btnColor,
   quoteColor,
 }) => {
-  console.log(bgColor);
   return (
     <div className={`card md:w-auto ${bgColor}  shadow-sm `}>
       <div className="card-body space-y-4">

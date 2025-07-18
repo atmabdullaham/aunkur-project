@@ -14,7 +14,7 @@ const Signup = () => {
   useEffect(() => {
     document.title = "SignUp | Fluentor";
   }, []);
-  const { signInWithGoogle, createUserWithEP, updateUser, setUser } =
+  const { signInWithGoogle, createUser, updateUser, setUser } =
     useContext(AuthContext);
   const navigate = useNavigate();
   const {
@@ -29,7 +29,7 @@ const Signup = () => {
     const { name, email, password, photo } = data;
 
     try {
-      const result = await createUserWithEP(email, password);
+      const result = await createUser(email, password);
       const user = result.user;
 
       await updateUser(name, photo);
@@ -114,7 +114,7 @@ const Signup = () => {
                   {...register("password", {
                     required: "Password is required",
                     minLength: {
-                      value: 6,
+                      value: 4,
                       message: "password min 6 characters",
                     },
                     maxLength: {

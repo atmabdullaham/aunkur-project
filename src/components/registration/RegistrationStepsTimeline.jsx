@@ -86,45 +86,48 @@ const RegistrationStepsTimeline = ({ isFormSubmitted, isPaymentDone }) => {
       </div>
 
       {/* Application Process Details */}
-      <div className="bg-white p-4 md:p-6">
-        <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-4">
-          আবেদন পদ্ধতি:
-        </h3>
+      {!isFormSubmitted && !isPaymentDone && (
+        <div className="bg-white p-4 md:p-6">
+          <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-4">
+            আবেদন পদ্ধতি:
+          </h3>
 
-        <ul className="space-y-3 text-gray-700">
-          <li className="flex items-start">
-            <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-            <span>
-              0183834377 (বিকাশ) নাম্বারে সেন্ডমানি করে ট্রানজেকশন আইডিটি কপি
-              করে রাখুন
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-            <span>নিচের ফরমটি পূরণ করুন।</span>
-          </li>
+          <ul className="space-y-3 text-gray-700">
+            <li className="flex items-start">
+              <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span>
+                0183834377 (বিকাশ) নাম্বারে সেন্ডমানি করে ট্রানজেকশন আইডিটি কপি
+                করে রাখুন
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span>নিচের ফরমটি পূরণ করুন।</span>
+            </li>
 
-          <li className="flex items-start">
-            <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-            <span>
-              নেক্সট বাটনে ক্লিক করুন (আপনার দেওয়া সকল তথ্য ভালো করে চেক করুন)
-            </span>
-          </li>
+            <li className="flex items-start">
+              <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span>
+                নেক্সট বাটনে ক্লিক করুন (আপনার দেওয়া সকল তথ্য ভালো করে চেক
+                করুন)
+              </span>
+            </li>
 
-          <li className="flex items-start">
-            <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-            <span>
-              যে নাম্বার থেকে টাকা পাঠিয়েছেন সেই নাম্বারটি ও ট্রানজেকশন আইডিটি
-              প্রদান করুন এবং I agree তে টিক দিন
-            </span>
-          </li>
+            <li className="flex items-start">
+              <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span>
+                যে নাম্বার থেকে টাকা পাঠিয়েছেন সেই নাম্বারটি ও ট্রানজেকশন
+                আইডিটি প্রদান করুন এবং I agree তে টিক দিন
+              </span>
+            </li>
 
-          <li className="flex items-start">
-            <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-            <span>সাবমিট বাটনে ক্লিক করে আপনার আবেদন সম্পন্ন করুন</span>
-          </li>
-        </ul>
-      </div>
+            <li className="flex items-start">
+              <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span>সাবমিট বাটনে ক্লিক করে আপনার আবেদন সম্পন্ন করুন</span>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

@@ -37,7 +37,11 @@ const RegistrationFee = ({ onSuccess }) => {
           <label className="label">Bkash Number *</label>
           <input
             {...register("bkash_number", {
-              required: "Bkash name is required",
+              required: "Bkash number is required",
+              pattern: {
+                value: /^01[0-9]{9}$/,
+                message: "বাংলাদেশি মোবাইল নম্বর দিন (১১ ডিজিট)",
+              },
             })}
             placeholder="Write Bkash Number"
             className="input input-bordered w-full"
@@ -51,7 +55,11 @@ const RegistrationFee = ({ onSuccess }) => {
           <label className="label">Transaction Id *</label>
           <input
             {...register("transaction_Id", {
-              required: "Id is required",
+              required: "Transaction Id is required",
+              pattern: {
+                value: /^[A-Za-z0-9]{6,15}$/,
+                message: "সঠিক Transaction Id দিন",
+              },
             })}
             placeholder="Write Transaction Id"
             className="input input-bordered w-full"

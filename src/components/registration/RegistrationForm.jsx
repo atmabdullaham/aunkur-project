@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const RegistrationForm = ({ onSubmit }) => {
+  const { user } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -124,7 +126,7 @@ const RegistrationForm = ({ onSubmit }) => {
           </div>
           {/* Occupation Mother*/}
           <div>
-            <label className="label">Mother's Occupation</label>
+            <label className="label">Mother's Occupation *</label>
             <input
               {...register("mother_occupation", {
                 required: "Mother's occupation is required",
@@ -157,13 +159,22 @@ const RegistrationForm = ({ onSubmit }) => {
           {/* Class */}
           <div>
             <label className="label">Class *</label>
-            <input
+            <select
               {...register("student_class", {
                 required: "Class is required",
               })}
               placeholder="Class"
               className="input input-bordered w-full"
-            />
+            >
+              <option value="">Select</option>
+              <option value="four">Four</option>
+              <option value="five">Five</option>
+              <option value="six">Six</option>
+              <option value="seven">Seven</option>
+              <option value="eight">Eight</option>
+              <option value="nine">Nine</option>
+              <option value="ten">Ten</option>
+            </select>
             {errors.student_class && (
               <p className="text-error">{errors.student_class.message}</p>
             )}
@@ -196,7 +207,14 @@ const RegistrationForm = ({ onSubmit }) => {
           <div>
             <label className="label">Roll*</label>
             <input
-              {...register("student_roll", { required: "Roll is required" })}
+              {...register("student_roll", {
+                required: "Roll is required",
+                pattern: {
+                  value: /^[0-9]{1,6}$/,
+                  message: "Give a valid roll number (1-6 digits)",
+                },
+              })}
+              type="number"
               placeholder="Your roll number"
               className="input input-bordered w-full"
             />
@@ -214,6 +232,10 @@ const RegistrationForm = ({ onSubmit }) => {
             <input
               {...register("phone_number", {
                 required: "Phone number is required",
+                pattern: {
+                  value: /^01[0-9]{9}$/,
+                  message: "Give a valid Bangladeshi mobile number (11 digits)",
+                },
               })}
               placeholder="Phone"
               className="input input-bordered w-full"
@@ -229,6 +251,10 @@ const RegistrationForm = ({ onSubmit }) => {
             <input
               {...register("whatsapp_number", {
                 required: "Whatsapp number is required",
+                pattern: {
+                  value: /^01[0-9]{9}$/,
+                  message: "Give a valid Bangladeshi mobile number (11 digits)",
+                },
               })}
               placeholder="Whatsapp Number"
               className="input input-bordered w-full"
@@ -312,7 +338,9 @@ const RegistrationForm = ({ onSubmit }) => {
               type="email"
               {...register("email", { required: "Email is required" })}
               placeholder="Email"
+              defaultValue={user?.email}
               className="input input-bordered w-full"
+              readOnly
             />
             {errors.email && (
               <p className="text-error">{errors.email.message}</p>

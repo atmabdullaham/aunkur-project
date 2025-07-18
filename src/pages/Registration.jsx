@@ -9,7 +9,7 @@ const Registration = () => {
   const [feeData, setFeeData] = useState(null); // Stores payment data
   const [formSubmitted, setFormSubmitted] = useState(false); // Controls form visibility
   const [paymentSuccess, setPaymentSuccess] = useState(false); // Controls payment visibility
-  console.log(feeData);
+  // console.log(feeData);
 
   // Handler when payment is successful
   const handlePaymentSuccess = (paymentData) => {
@@ -25,19 +25,19 @@ const Registration = () => {
       ...data,
       submittedAt: new Date().toISOString(),
     };
-    console.log("Final Submission Data:", finalSubmission);
+    // console.log("Final Submission Data:", finalSubmission);
     // Combine both registration and payment data
 
     try {
       await axios
-        .post("http://localhost:5000/application", finalSubmission)
+        .post("https://aunkur-backend.vercel.app/application", finalSubmission)
         .then((res) => {
-          console.log("Data saved successfully:", res.data);
+          // console.log("Data saved successfully:", res.data);
         });
       // Optionally show success message or redirect
       document.getElementById("my_modal_5").showModal();
     } catch (error) {
-      console.error("Failed to save data:", error);
+      // console.error("Failed to save data:", error);
       alert("Something went wrong. Please try again.");
     }
   };

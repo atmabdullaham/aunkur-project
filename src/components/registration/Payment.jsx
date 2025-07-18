@@ -49,9 +49,8 @@ const Payment = ({ onSuccess }) => {
         { withCredentials: true }
       );
       window.location.href = data.bkashURL;
-      console.log(data);
     } catch (error) {
-      console.log(error.response.data);
+      alert("Payment error:", error);
     }
   };
 

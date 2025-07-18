@@ -8,11 +8,9 @@ import "../style/style.css";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogout = () => {
-    logOut()
-      .then(() => {
-        toast.success("Logged out");
-      })
-      .then((error) => console.log(error));
+    logOut().then(() => {
+      toast.success("Logged out");
+    });
   };
 
   const navOptions = (

@@ -9,12 +9,12 @@ import googleLogo from "../assets/google.svg";
 import toast from "react-hot-toast";
 // import axios from "axios";
 import { AuthContext } from "../providers/AuthProvider";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from.pathname || "/";
-  console.log(from);
 
   useEffect(() => {
     document.title = "Login | Fluentro";
@@ -24,8 +24,17 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then(async (result) => {
-        const user = { email: result.user.email };
-        console.log(user);
+        const userInfo = {
+          email: result.user?.email,
+          name: result.user?.displayName,
+        };
+        try {
+          await axios
+            .post("https://aunkur-backend.vercel.app/user", userInfo)
+            .then((res) => {});
+        } catch (error) {
+          alert("Something went wrong. Please try again.");
+        }
         toast.success("Successfully logged in");
         navigate(from);
       })
