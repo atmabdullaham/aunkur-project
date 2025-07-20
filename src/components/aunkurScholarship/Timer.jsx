@@ -30,7 +30,7 @@ const Timer = () => {
         {/* Heading */}
         <h2 className="flex justify-center items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-700 bg-green-200 bg-opacity-60 backdrop-blur-md p-4 rounded-xl shadow-inner">
           <GiTrophyCup className="text-xl hidden lg:block sm:text-2xl" />
-          এখনই অঙ্কুর স্কলারশিপে অংশগ্রহণ করুন!
+          এখনই অংকুর স্কলারশিপ অংশগ্রহণ করুন!
         </h2>
 
         {/* Countdown */}
