@@ -8,13 +8,12 @@ import AunkurScholarship from "../pages/AunkurScholarship";
 import Error from "../components/Error";
 import Success from "../components/Success";
 import Activities from "../pages/Activities";
-import NoticeAndBlog from "../pages/NoticeAndBlog";
-import Calender from "../pages/Calender";
 import Library from "../pages/Library";
 import Quiz from "../pages/Quiz";
 import Result from "../pages/Result";
 import PrivateRoute from "./PrivateRoute";
 import UserProfile from "../pages/UserProfile";
+import Notice from "../pages/Notice";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -57,13 +56,10 @@ export const router = createBrowserRouter([
         element: <Activities></Activities>,
       },
       {
-        path: "/notice-blogs",
-        element: <NoticeAndBlog></NoticeAndBlog>,
+        path: "/notice",
+        element: <Notice></Notice>,
       },
-      {
-        path: "/calender",
-        element: <Calender></Calender>,
-      },
+
       {
         path: "/library",
         element: <Library></Library>,

@@ -59,7 +59,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/notice-blogs"
+          to="/notice"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
@@ -68,23 +68,10 @@ const Navbar = () => {
               : "hover:text-[#000000]"
           }
         >
-          নোটিশ ও ব্লগ
+          নোটিশ
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/calender"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-[#000000] border-[#ff1e1e] font-bold animated-border" /* Apply the animated-border class when active */
-              : "hover:text-[#000000]"
-          }
-        >
-          ক্যালেন্ডার
-        </NavLink>
-      </li>
+
       <li>
         <NavLink
           to="/library"
@@ -146,13 +133,12 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul

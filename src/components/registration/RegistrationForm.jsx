@@ -320,12 +320,7 @@ const RegistrationForm = ({ onSubmit }) => {
             >
               <option value="">Select</option>
               <option value="chawkbazar">চকবাজার</option>
-              <option
-                value="Chandgaon
-"
-              >
-                চাঁদগাও
-              </option>
+              <option value="Chandgaon">চাঁদগাও</option>
             </select>
             {errors.exam_center && (
               <p className="text-error">{errors.exam_center.message}</p>
