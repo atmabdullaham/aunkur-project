@@ -1,7 +1,6 @@
 import React from "react";
 import Image_1 from "../../assets/activities_1.png";
 import Image_2 from "../../assets/activities_2.png";
-// import Image_3 from "../../assets/activities_3.png";
 import Image_4 from "../../assets/activities_4.png";
 import Image_5 from "../../assets/activities_5.png";
 import Image_6 from "../../assets/activities_6.png";
@@ -9,7 +8,7 @@ import Image_7 from "../../assets/activities_7.png";
 
 const OurActivitiesBanner = () => {
   return (
-    <div className="bg-[#fdf1e8] px-4 py-12 sm:px-6 lg:px-8">
+    <div className="bg-[#fdf1e8] px-4 py-10 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col lg:flex-row justify-between items-center gap-12">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
