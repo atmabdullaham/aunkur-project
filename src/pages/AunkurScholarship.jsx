@@ -12,7 +12,7 @@ import ScholarshipProgramme from "../components/aunkurScholarship/ScholarshipPro
 
 const AunkurScholarship = () => {
   return (
-    <div>
+    <div className="w-11/12 md:10/12 mx-auto border-2">
       <Header />
       <Timer />
       <AunkurSyllabus />

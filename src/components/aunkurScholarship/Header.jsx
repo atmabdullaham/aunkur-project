@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="relative overflow-hidden bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className=" bg-white">
+      <div className="  py-10">
         <div className="flex flex-col md:flex-row items-center gap-0 lg:gap-10">
           {/* Left Section */}
           <div className="w-full md:w-1/2 text-center md:text-left">

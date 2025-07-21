@@ -1,23 +1,25 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import TopNavBar from "../components/shared/TopNavBar";
 
 const Layout = () => {
+  const location = useLocation();
+  const login = location.pathname.includes("login");
+  const signup = location.pathname.includes("signup");
   return (
     <div className="font-siliguri">
       {/* Top Navbar */}
-      <TopNavBar></TopNavBar>
+      {login || signup || <TopNavBar></TopNavBar>}
       {/* Navbar */}
-      <Navbar></Navbar>
+      {login || signup || <Navbar></Navbar>}
       {/* Outlet */}
       <div className="min-h-[calc(100vh-306px)]">
-        {" "}
-        <Outlet></Outlet>{" "}
+        <Outlet></Outlet>
       </div>
 
       {/* Footer */}
-      <Footer></Footer>
+      {login || signup || <Footer></Footer>}
     </div>
   );
 };
