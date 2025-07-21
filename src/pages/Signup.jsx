@@ -14,7 +14,7 @@ const Signup = () => {
   useEffect(() => {
     document.title = "SignUp | Fluentor";
   }, []);
-  const { signInWithGoogle, createUser, updateUser, setUser } =
+  const { signInWithGoogle, createUser, updateUser, setUser, verifyEmail } =
     useContext(AuthContext);
   const navigate = useNavigate();
   const {
@@ -30,6 +30,8 @@ const Signup = () => {
 
     try {
       const result = await createUser(email, password);
+      await verifyEmail();
+      toast.success("Please verify your email");
       const user = result.user;
 
       await updateUser(name, photo);

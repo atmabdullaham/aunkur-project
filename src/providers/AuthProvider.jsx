@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  sendEmailVerification,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -24,6 +25,10 @@ const AuthProver = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const verifyEmail = () => {
+    setLoading(true);
+    return sendEmailVerification(auth.currentUser);
+  };
   // update user profile
   const updateUser = (name, photo) => {
     setLoading(true);
@@ -72,6 +77,7 @@ const AuthProver = ({ children }) => {
     logOut,
     signInWithGoogle,
     updateUser,
+    verifyEmail,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
