@@ -11,6 +11,7 @@ import {
 } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -18,6 +19,7 @@ const auth = getAuth(app);
 const AuthProver = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const axiosPublic = useAxiosPublic();
 
   // create user with email password
   const createUser = (email, password) => {
@@ -61,12 +63,24 @@ const AuthProver = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       // console.log(currentUser);
+      if (currentUser) {
+        //get JWT token and store in client side
+        const userInfo = { email: currentUser.email };
+        axiosPublic.post("/jwt", userInfo).then((res) => {
+          if (res.data.token) {
+            localStorage.setItem("access-token", res.data.token);
+          }
+        });
+      } else {
+        // todo: clear JWT token
+        localStorage.removeItem("access-token");
+      }
       setLoading(false);
     });
     return () => {
       return unsubscribe();
     };
-  }, []);
+  }, [axiosPublic]);
 
   const authInfo = {
     user,

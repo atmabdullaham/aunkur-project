@@ -7,7 +7,8 @@ import { Link, Outlet } from "react-router-dom";
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
   const [application] = useApplication();
-  console.log(application);
+  const isAdmin = true; // Replace with actual admin check logic
+
   return (
     <div className="min-h-screen bg-[#39e1a7] text-white p-4 space-y-6 md:space-y-0 md:flex md:gap-6">
       {/* Sidebar (Top on mobile) */}
@@ -24,33 +25,81 @@ const UserProfile = () => {
 
         {/* Sidebar Navigation */}
         <ul className="mt-6 space-y-2 text-sm">
-          <li>
-            <Link
-              to="/profile"
-              className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
-            >
-              My Profile
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="my-registration"
-              className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
-            >
-              My Registration
-              <div className="badge badge-sm badge-secondary">
-                {application.length}
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="admitcard"
-              className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
-            >
-              Admit Card
-            </Link>
-          </li>
+          {isAdmin ? (
+            <>
+              <li>
+                <Link
+                  to="all-users"
+                  className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
+                >
+                  All Users
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="all-registrations"
+                  className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
+                >
+                  All Registrations
+                  <div className="badge badge-sm badge-secondary"></div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="pending-registrations"
+                  className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
+                >
+                  Pending Registrations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="accepted-registrations"
+                  className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
+                >
+                  Accepted Registrations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="rejected-registrations"
+                  className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
+                >
+                  Rejected Registrations
+                </Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link
+                  to="/profile"
+                  className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
+                >
+                  My Profile
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="my-registration"
+                  className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
+                >
+                  My Registration
+                  <div className="badge badge-sm badge-secondary">
+                    {application.length}
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="admitcard"
+                  className="btn flex items-center justify-between bg-[#0D1B16] rounded-md p-3 border-l-4 border-green-500 text-white"
+                >
+                  Admit Card
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
 

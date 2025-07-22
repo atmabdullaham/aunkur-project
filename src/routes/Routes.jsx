@@ -16,6 +16,7 @@ import UserProfile from "../pages/UserProfile";
 import Notice from "../pages/Notice";
 import ProfileSummary from "../components/userProfile/profileSummary";
 import MyRegistration from "../components/userProfile/MyRegistration";
+import AllUsers from "../components/userProfile/admin/AllUsers";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -93,6 +94,27 @@ export const router = createBrowserRouter([
           {
             path: "admitcard",
             element: <div>Admit Card is Not Published</div>,
+          },
+          // Admin Routes
+          {
+            path: "all-users",
+            element: <AllUsers></AllUsers>,
+          },
+          {
+            path: "all-registrations",
+            element: <div>All Registrations</div>,
+          },
+          {
+            path: "pending-registrations",
+            element: <div>Pending Registrations</div>,
+          },
+          {
+            path: "accepted-registrations",
+            element: <div>Accepted Registrations</div>,
+          },
+          {
+            path: "rejected-registrations",
+            element: <div>Rejected Registrations </div>,
           },
         ],
       },

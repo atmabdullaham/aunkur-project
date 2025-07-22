@@ -25,12 +25,14 @@ const Login = () => {
     signInWithGoogle()
       .then(async (result) => {
         const userInfo = {
+          uid: result.user?.uid,
           email: result.user?.email,
           name: result.user?.displayName,
+          role: "user",
         };
         try {
           await axios
-            .post("https://aunkur-backend.vercel.app/user", userInfo)
+            .post("http://localhost:5000/user", userInfo)
             .then((res) => {});
         } catch (error) {
           alert("Something went wrong. Please try again.");

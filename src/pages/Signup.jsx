@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import signUpanim from "../assets/reg.json";
 import signUpAnim from "../assets/register.json";
@@ -8,15 +8,18 @@ import googleLogo from "../assets/google.svg";
 import Lottie from "lottie-react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../providers/AuthProvider";
+import axios from "axios";
 
 const Signup = () => {
   // Set Title
   useEffect(() => {
-    document.title = "SignUp | Fluentor";
+    document.title = "SignUp | Aunkur";
   }, []);
   const { signInWithGoogle, createUser, updateUser, setUser, verifyEmail } =
     useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from.pathname || "/";
   const {
     register,
     handleSubmit,
@@ -44,9 +47,23 @@ const Signup = () => {
   };
   const handleGoogleSignIn = () => {
     signInWithGoogle()
-      .then(() => {
-        toast.success("logged in");
-        navigate("/");
+      .then(async (result) => {
+        const userInfo = {
+          uid: result.user?.uid,
+          email: result.user?.email,
+          name: result.user?.displayName,
+          role: "user",
+        };
+
+        try {
+          await axios
+            .post("http://localhost:5000/user", userInfo)
+            .then((res) => {});
+        } catch (error) {
+          alert("Something went wrong. Please try again.");
+        }
+        toast.success("Successfully logged in");
+        navigate(from);
       })
       .catch((error) => {
         toast.error(error.message);
