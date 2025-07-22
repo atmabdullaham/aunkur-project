@@ -3,9 +3,12 @@ import RegistrationStepsTimeline from "../components/registration/RegistrationSt
 import RegistrationForm from "../components/registration/RegistrationForm";
 
 import RegistrationFee from "../components/registration/RegistrationFee";
-import axios from "axios";
+
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const Registration = () => {
+  const axiosSecure = useAxiosSecure();
+
   const [feeData, setFeeData] = useState(null); // Stores payment data
   const [formSubmitted, setFormSubmitted] = useState(false); // Controls form visibility
   const [paymentSuccess, setPaymentSuccess] = useState(false); // Controls payment visibility
@@ -23,21 +26,20 @@ const Registration = () => {
     const finalSubmission = {
       ...feeData,
       ...data,
+      reg_status: "under_review",
       submittedAt: new Date().toISOString(),
     };
     // console.log("Final Submission Data:", finalSubmission);
     // Combine both registration and payment data
 
     try {
-      await axios
-        .post("https://aunkur-backend.vercel.app/application", finalSubmission)
-        .then((res) => {
-          // console.log("Data saved successfully:", res.data);
-        });
+      await axiosSecure.post("/applications", finalSubmission).then((res) => {
+        // console.log("Data saved successfully:", res.data);
+      });
       // Optionally show success message or redirect
       document.getElementById("my_modal_5").showModal();
     } catch (error) {
-      // console.error("Failed to save data:", error);
+      console.error("Failed to save data:", error);
       alert("Something went wrong. Please try again.");
     }
   };

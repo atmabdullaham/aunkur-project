@@ -14,6 +14,8 @@ import Result from "../pages/Result";
 import PrivateRoute from "./PrivateRoute";
 import UserProfile from "../pages/UserProfile";
 import Notice from "../pages/Notice";
+import ProfileSummary from "../components/userProfile/profileSummary";
+import MyRegistration from "../components/userProfile/MyRegistration";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -44,7 +46,7 @@ export const router = createBrowserRouter([
         element: <Signup></Signup>,
       },
       {
-        path: "/error?",
+        path: "/error",
         element: <Error></Error>,
       },
       {
@@ -79,6 +81,20 @@ export const router = createBrowserRouter([
             <UserProfile></UserProfile>
           </PrivateRoute>
         ),
+        children: [
+          {
+            index: true, // This is for "/profile"
+            element: <ProfileSummary></ProfileSummary>,
+          },
+          {
+            path: "my-registration", // This is for "/profile/my-registration"
+            element: <MyRegistration></MyRegistration>,
+          },
+          {
+            path: "admitcard",
+            element: <div>Admit Card is Not Published</div>,
+          },
+        ],
       },
     ],
   },

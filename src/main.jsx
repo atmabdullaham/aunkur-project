@@ -6,12 +6,16 @@ import { router } from "./routes/Routes.jsx";
 import { RouterProvider } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import AuthProver from "./providers/AuthProvider.jsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProver>
-      <RouterProvider router={router}></RouterProvider>
-      <Toaster position="top-right" reverseOrder={false} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router}></RouterProvider>
+        <Toaster position="top-right" reverseOrder={false} />
+      </QueryClientProvider>
     </AuthProver>
   </StrictMode>
 );
