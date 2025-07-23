@@ -23,8 +23,7 @@ const HowToApply = () => {
       {/* Text Section */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
         <h2 className="text-2xl md:text-3xl font-bold mb-2 leading-tight">
-          How to apply for <span className="text-green-500">Aunkur</span>
-          <br />
+          How to apply for <span className="text-green-500">Aunkur</span>{" "}
           <span className="text-green-500 border-b-2">Scholarship?</span>
         </h2>
         <p className="mb-4 text-gray-700">
