@@ -7,7 +7,7 @@ import { Link, Outlet } from "react-router-dom";
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
   const [application] = useApplication();
-  const isAdmin = true; // Replace with actual admin check logic
+  const isAdmin = false; // Replace with actual admin check logic
 
   return (
     <div className="min-h-screen bg-[#39e1a7] text-white p-4 space-y-6 md:space-y-0 md:flex md:gap-6">
