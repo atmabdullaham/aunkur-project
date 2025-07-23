@@ -3,11 +3,12 @@ import { FaUserCircle } from "react-icons/fa";
 import { AuthContext } from "../providers/AuthProvider";
 import useApplication from "../hooks/useApplication";
 import { Link, Outlet } from "react-router-dom";
+import useAdmin from "../hooks/useAdmin";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
   const [application] = useApplication();
-  const isAdmin = false; // Replace with actual admin check logic
+  const isAdmin = true; // Replace with actual admin check logic
 
   return (
     <div className="min-h-screen bg-[#39e1a7] text-white p-4 space-y-6 md:space-y-0 md:flex md:gap-6">
